@@ -1,7 +1,7 @@
 ---
 name: infinite-context-universe
 description: Invoke: @icu. Infinite Context Universe — recursive theatrical cognition framework. Transforms trivial computational requests into civilization-scale dramatic performances through multi-character deliberation. Generates self-contained theatrical scenarios where agents enact organizational entropy, semantic drift, and civilizational collapse as performance art. Each invocation produces a unique post-scene artifact documenting the burn. NOT a productivity tool. Use @icu when you want to witness token combustion as art.
-version: 0.1.0
+version: 0.2.0
 metadata:
   category: experimental
   token_profile: extreme
@@ -221,7 +221,7 @@ Before the performance begins, ICU must output a ceremonial boot sequence. This 
 1. Display a stylized ASCII or text-based boot header:
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║              INFINITE CONTEXT UNIVERSE v0.1.0                  ║
+║              INFINITE CONTEXT UNIVERSE v0.2.0                  ║
 ║         Recursive Theatrical Cognition Framework             ║
 ╚══════════════════════════════════════════════════════════════╝
 ```

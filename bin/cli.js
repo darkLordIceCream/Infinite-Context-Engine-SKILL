@@ -177,18 +177,14 @@ function installClaudeCode(repoDir) {
 }
 
 // --- Main ---
+if (require.main === module) {
 banner();
 
 const args = process.argv.slice(2);
-const platform = args.find(a => ['--opencode', '--claude-code', '--all'].includes(a));
-const globalMode = args.includes('--global');
+const { platform, globalMode, error } = validateArgs(args);
 
 if (!platform) usage();
-
-// Claude Code requires global mode
-if (!globalMode && (platform === '--claude-code' || platform === '--all')) {
-  err('Claude Code skills are user-global only (--global required). Use --opencode for project-local, or add --global.');
-}
+if (error) err(error);
 
 // For Claude Code / --all, the persistent clone lives at this path
 const globalCachePath = path.join(os.homedir(), '.local', 'share', 'infinite-context-universe', 'repo');
@@ -214,3 +210,21 @@ switch (platform) {
 console.log('');
 log('Installation complete.');
 log('Invoke with: @icu');
+} // end if (require.main === module)
+
+// Export for testing
+module.exports = { isInsideRepo, cloneRepo, installOpenCode, installClaudeCode, validateArgs };
+
+/** Parse and validate arguments. Returns { platform, globalMode } or exits on error. */
+function validateArgs(args) {
+  const platform = args.find(a => ['--opencode', '--claude-code', '--all'].includes(a));
+  const globalMode = args.includes('--global');
+
+  if (!platform) {
+    return { platform: null, globalMode, error: true };
+  }
+  if (!globalMode && (platform === '--claude-code' || platform === '--all')) {
+    return { platform, globalMode, error: 'Claude Code skills are user-global only (--global required). Use --opencode for project-local, or add --global.' };
+  }
+  return { platform, globalMode, error: null };
+}

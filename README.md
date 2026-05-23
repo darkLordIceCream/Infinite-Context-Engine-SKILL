@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/ICU-Recursive_Theatrical_Cognition-black?style=for-the-badge" alt="ICU"/>
   <br/>
-  <img src="https://img.shields.io/badge/version-0.1.0-1a1a2e?style=flat-square" alt="version"/>
+  <img src="https://img.shields.io/badge/version-0.2.0-1a1a2e?style=flat-square" alt="version"/>
   <img src="https://img.shields.io/badge/token_profile-EXTREME-ff4757?style=flat-square" alt="token profile"/>
   <img src="https://img.shields.io/badge/cognitive_architecture-recursive_deliberation-7b2d8e?style=flat-square" alt="cognitive architecture"/>
   <img src="https://img.shields.io/badge/productivity-NOT_APPLICABLE-2ed573?style=flat-square" alt="productivity"/>
@@ -333,9 +333,10 @@ Infinite-Context-Universe-SKILL/
 ├── bin/cli.js                            # npx 安装 CLI
 ├── LICENSE                               # MIT
 ├── .gitignore
+├── metadata.json                         # 技能元数据
+├── CHANGELOG.md                          # 版本变更记录
 │
 ├── platform/                             # 平台适配
-│   ├── opencode/SKILL.md                 # OpenCode 适配
 │   └── claude-code/                      # Claude Code 适配
 │       ├── SKILL.md                      # Claude Code 版导演协议
 │       └── agents/                       # 子 agent 定义

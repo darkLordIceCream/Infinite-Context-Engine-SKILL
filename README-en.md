@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/ICU-Recursive_Theatrical_Cognition-black?style=for-the-badge" alt="ICU"/>
   <br/>
-  <img src="https://img.shields.io/badge/version-0.1.0-1a1a2e?style=flat-square" alt="version"/>
+  <img src="https://img.shields.io/badge/version-0.2.0-1a1a2e?style=flat-square" alt="version"/>
   <img src="https://img.shields.io/badge/token_profile-EXTREME-ff4757?style=flat-square" alt="token profile"/>
   <img src="https://img.shields.io/badge/cognitive_architecture-recursive_deliberation-7b2d8e?style=flat-square" alt="cognitive architecture"/>
   <img src="https://img.shields.io/badge/productivity-NOT_APPLICABLE-2ed573?style=flat-square" alt="productivity"/>
@@ -335,9 +335,10 @@ Infinite-Context-Universe-SKILL/
 ├── bin/cli.js                            # npx install CLI
 ├── LICENSE                               # MIT
 ├── .gitignore
+├── metadata.json                         # Skill metadata
+├── CHANGELOG.md                          # Version changelog
 │
 ├── platform/                             # Platform adapters
-│   ├── opencode/SKILL.md                 # OpenCode adapter
 │   └── claude-code/                      # Claude Code adapter
 │       ├── SKILL.md                      # Claude Code Director's Protocol
 │       └── agents/                       # Subagent definitions
