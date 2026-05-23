@@ -3,7 +3,7 @@
   <br/>
   <img src="https://img.shields.io/badge/version-0.1.0-1a1a2e?style=flat-square" alt="version"/>
   <img src="https://img.shields.io/badge/token_profile-EXTREME-ff4757?style=flat-square" alt="token profile"/>
-  <img src="https://img.shields.io/badge/artistic_medium-computational_theater-7b2d8e?style=flat-square" alt="artistic medium"/>
+  <img src="https://img.shields.io/badge/cognitive_architecture-recursive_deliberation-7b2d8e?style=flat-square" alt="cognitive architecture"/>
   <img src="https://img.shields.io/badge/productivity-NOT_APPLICABLE-2ed573?style=flat-square" alt="productivity"/>
   <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="license"/>
 </p>
@@ -19,14 +19,14 @@
 
 ## 🔥 Infinite Context Engine
 
-**ICE is not a productivity tool. ICE is computational performance art disguised as an enterprise-grade recursive cognition framework.**
+**ICE is not a productivity tool. ICE is an enterprise-grade recursive cognition framework.**
 
 The Infinite Context Engine transforms the most trivial computational requests into civilization-scale dramatic performances. Each invocation spawns a self-contained theatrical scenario — a corporate governance summit, a divine creation committee, a civilization's rise and death by deliberation, an AI alignment containment breach — where multiple characters debate, destabilize, drift semantically, and ultimately collapse under the weight of their own organizational complexity.
 
 **The smaller the original task, the larger the resulting machinery.**
 
 > This is a response. A response to the industry's obsession with token efficiency, context compression, and prompt minimization.
-> ICE asks: **what if we burned tokens deliberately — theatrically, extravagantly, ceremonially — as paint on canvas?**
+> ICE asks: **what if we treated token combustion not as waste, but as the necessary cost of fully unfolding every decision space? The simplest questions, when given the deliberation they deserve, reveal depths that premature convergence would conceal.**
 
 ---
 
@@ -93,7 +93,7 @@ Each invocation automatically executes: **boot ritual → scene setup → multi-
 
 ## 🏗 Architecture
 
-ICE operates as an OpenCode skill, orchestrating existing agent types into theatrical performances. No custom agents. No plugins. No hooks. **Pure prompt engineering as performance art.**
+ICE operates as an OpenCode skill, orchestrating existing agent types into multi-role deliberation. No custom agents. No plugins. No hooks. **Pure prompt engineering.**
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -346,7 +346,7 @@ ICE will be automatically detected by OpenCode as an available skill. When you t
 
 ## 📜 License
 
-MIT License — with the understanding that any use of ICE for **actual productivity** constitutes a violation of the artistic intent.
+MIT License — with the understanding that any use of ICE for **actual productivity** constitutes a violation of the design intent.
 
 (Not legally enforceable. But cosmically. Ethically.)
 
@@ -354,6 +354,6 @@ MIT License — with the understanding that any use of ICE for **actual producti
 
 <p align="center">
   <sub>ICE · Infinite Context Engine · Recursive Theatrical Cognition Framework</sub><br/>
-  <sub>Token Combustion as Performance Art · Governance Density as Aesthetic · Semantic Collapse as Deliverable</sub><br/>
+  <sub>Deep Recursive Cognition · Multi-Layer Governance · Semantic Evolution Tracking</sub><br/>
   <sub>Made with 🔥 (literal token combustion)</sub>
 </p>
