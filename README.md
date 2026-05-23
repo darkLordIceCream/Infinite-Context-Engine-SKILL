@@ -69,26 +69,14 @@ ICU 的测量标准与一切正规模板相反：
 
 ### 一句话安装（发给 AI Agent 即可）
 
-复制下面的话，发给你的 OpenCode 或 Claude Code，Agent 会自动完成克隆、链接、注册：
+将以下提示词复制并发送给你的 AI Agent（OpenCode / Claude Code / Cursor 等）：
 
-**OpenCode:**
 ```
-请安装 Infinite Context Universe 技能。
-克隆 https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL 到
-~/.config/opencode/skills/infinite-context-universe（symlink 即可），
-然后验证 SKILL.md 存在。
+安装 Infinite Context Universe 技能：
+https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/INSTALL.md
 ```
 
-**Claude Code:**
-```
-请安装 Infinite Context Universe 技能到 Claude Code。
-1. 克隆 https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL 到
-   ~/.local/share/infinite-context-universe/repo
-2. symlink 到 ~/.claude/skills/infinite-context-universe
-3. 将 platform/claude-code/agents/ 下的 oracle.md、fixer.md、librarian.md
-   复制到 ~/.claude/agents/
-4. 验证所有文件到位。
-```
+Agent 会自动读取安装指南，完成克隆、链接和注册。
 
 ### 其他安装方式
 
@@ -332,7 +320,8 @@ ICU 追踪两套指标。一套是真实的。另一套是……更有趣的。
 Infinite-Context-Universe-SKILL/
 │
 ├── SKILL.md                              # 导演协议 (882 行)
-├── README.md                             # 本文档 (中文)
+├── INSTALL.md                             # Agent 自动安装指南 ⭐
+├── README.md                              # 本文档 (中文)
 ├── README-en.md                          # English version
 ├── install.sh                            # 一键安装脚本
 ├── package.json                          # npx 包配置

@@ -70,26 +70,14 @@ The user does not receive an answer. The user receives an **incident report** fr
 
 ### One-Line Install (paste to your AI Agent)
 
-Copy the prompt below and send it to your OpenCode or Claude Code. The Agent handles cloning, linking, and registration automatically:
+Copy this and send it to your AI agent (OpenCode / Claude Code / Cursor / etc.):
 
-**OpenCode:**
 ```
-Please install the Infinite Context Universe skill. Clone
-https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL to
-~/.config/opencode/skills/infinite-context-universe (symlink is fine),
-then verify SKILL.md exists.
+Install the Infinite Context Universe skill:
+https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/INSTALL.md
 ```
 
-**Claude Code:**
-```
-Please install the Infinite Context Universe skill for Claude Code.
-1. Clone https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL to
-   ~/.local/share/infinite-context-universe/repo
-2. Symlink it to ~/.claude/skills/infinite-context-universe
-3. Copy oracle.md, fixer.md, librarian.md from platform/claude-code/agents/
-   to ~/.claude/agents/
-4. Verify all files are in place.
-```
+The agent will read the installation guide and handle cloning, linking, and registration automatically.
 
 ### Alternative Methods
 
@@ -339,7 +327,8 @@ ICU tracks two sets of metrics. One is real. The other is… more interesting.
 Infinite-Context-Universe-SKILL/
 │
 ├── SKILL.md                              # Director's Protocol (882 lines)
-├── README.md                             # 中文文档
+├── INSTALL.md                             # AI Agent installation guide ⭐
+├── README.md                              # 中文文档
 ├── README-en.md                          # This document (English)
 ├── install.sh                            # One-line install script
 ├── package.json                          # npx package config
