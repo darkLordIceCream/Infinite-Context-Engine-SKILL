@@ -1,0 +1,65 @@
+{
+  "name": "infinite-context-universe",
+  "version": "0.2.0",
+  "description": "Infinite Context Universe — recursive theatrical cognition framework. Transforms trivial computational requests into civilization-scale dramatic performances through multi-character deliberation. NOT a productivity tool.",
+  "license": "MIT",
+  "author": "darkLordIceCream",
+  "repository": "https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL",
+  "languages": ["en", "zh"],
+  "compatibility": {
+    "agents": [
+      "opencode",
+      "claude-code"
+    ]
+  },
+  "entryPoint": "SKILL.md",
+  "references": [
+    "scenes/01-strategic-realignment-summit.md",
+    "scenes/02-cosmogonic-committee.md",
+    "scenes/03-civilization-deliberation-engine.md",
+    "scenes/04-alignment-containment-protocol.md",
+    "platform/claude-code/SKILL.md"
+  ],
+  "triggers": [
+    "@icu",
+    "infinite context universe",
+    "infinite context engine",
+    "token combustion",
+    "recursive cognition",
+    "theatrical cognition",
+    "civilization simulator",
+    "governance cascade",
+    "organizational entropy",
+    "semantic drift"
+  ],
+  "bundled": {
+    "bin": [
+      "bin/cli.js"
+    ],
+    "installers": [
+      "install.sh",
+      "INSTALL.md"
+    ],
+    "scenes": [
+      "scenes/01-strategic-realignment-summit.md",
+      "scenes/02-cosmogonic-committee.md",
+      "scenes/03-civilization-deliberation-engine.md",
+      "scenes/04-alignment-containment-protocol.md"
+    ],
+    "platformAdapters": [
+      "platform/claude-code/SKILL.md",
+      "platform/claude-code/agents/oracle.md",
+      "platform/claude-code/agents/fixer.md",
+      "platform/claude-code/agents/librarian.md"
+    ]
+  },
+  "tokenProfile": {
+    "level": "extreme",
+    "estimatedBurn": {
+      "light": "~30,000 tokens",
+      "standard": "~60,000 tokens",
+      "civilization": "~100,000 tokens"
+    },
+    "artisticMedium": "computational_theater"
+  }
+}
