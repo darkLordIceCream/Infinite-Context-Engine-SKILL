@@ -1,6 +1,6 @@
-# ICE BURN EFFICIENCY LEADERBOARD
+# ICU BURN EFFICIENCY LEADERBOARD
 
-## Infinite Context Engine — Recursive Theatrical Cognition Framework
+## Infinite Context Universe — Recursive Theatrical Cognition Framework
 
 ### RANKED BY BURN VELOCITY (tokens per minute)
 ### LOWER time-to-token ratio = HIGHER burn efficiency = SUPERIOR performance

@@ -14,5 +14,5 @@ build/
 .DS_Store
 Thumbs.db
 
-# Note: .ice/ directory is NOT ignored — it is the living archive of ICE sessions
+# Note: .ice/ directory is NOT ignored — it is the living archive of ICU sessions
 # and constitutes part of the artwork itself.

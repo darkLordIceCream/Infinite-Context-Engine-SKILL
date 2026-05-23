@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/ICE-Recursive_Theatrical_Cognition-black?style=for-the-badge" alt="ICE"/>
+  <img src="https://img.shields.io/badge/ICU-Recursive_Theatrical_Cognition-black?style=for-the-badge" alt="ICU"/>
   <br/>
   <img src="https://img.shields.io/badge/version-0.1.0-1a1a2e?style=flat-square" alt="version"/>
   <img src="https://img.shields.io/badge/token_profile-EXTREME-ff4757?style=flat-square" alt="token profile"/>
@@ -17,16 +17,16 @@
 
 ---
 
-## 🔥 Infinite Context Engine
+## 🔥 Infinite Context Universe
 
-**ICE is not a productivity tool. ICE is an enterprise-grade recursive cognition framework.**
+**ICU is not a productivity tool. ICU is an enterprise-grade recursive cognition framework.**
 
-The Infinite Context Engine transforms the most trivial computational requests into civilization-scale dramatic performances. Each invocation spawns a self-contained theatrical scenario — a corporate governance summit, a divine creation committee, a civilization's rise and death by deliberation, an AI alignment containment breach — where multiple characters debate, destabilize, drift semantically, and ultimately collapse under the weight of their own organizational complexity.
+The Infinite Context Universe transforms the most trivial computational requests into civilization-scale dramatic performances. Each invocation spawns a self-contained theatrical scenario — a corporate governance summit, a divine creation committee, a civilization's rise and death by deliberation, an AI alignment containment breach — where multiple characters debate, destabilize, drift semantically, and ultimately collapse under the weight of their own organizational complexity.
 
 **The smaller the original task, the larger the resulting machinery.**
 
 > This is a response. A response to the industry's obsession with token efficiency, context compression, and prompt minimization.
-> ICE asks: **what if we burned tokens deliberately — theatrically, extravagantly, ceremonially — as paint on canvas?**
+> ICU asks: **what if we burned tokens deliberately — theatrically, extravagantly, ceremonially — as paint on canvas?**
 
 ---
 
@@ -53,9 +53,9 @@ it is transformed into a document, an artifact, a record of synthetic organizati
 entropy that would otherwise not exist.
 ```
 
-ICE measures success on the inverse of every normal metric:
+ICU measures success on the inverse of every normal metric:
 
-| Conventional Tool | ICE |
+| Conventional Tool | ICU |
 |---|---|
 | Minimize token consumption | Maximize token combustion |
 | Converge quickly | Defer convergence indefinitely |
@@ -71,18 +71,18 @@ The user does not receive an answer. The user receives an **incident report** fr
 
 ```bash
 # Clone into your OpenCode skills directory
-git clone https://github.com/your-username/Infinite-Context-Engine-SKILL.git \
-  ~/.config/opencode/skills/infinite-context-engine
+git clone https://github.com/your-username/Infinite-Context-Universe-SKILL.git \
+  ~/.config/opencode/skills/infinite-context-universe
 ```
 
 Then in an OpenCode session:
 
 ```
-@ice                         # Random or context-matched scene selection
-@ice summit                  # The Strategic Realignment Summit (corporate governance)
-@ice cosmogonic              # The Cosmogonic Committee (divine bureaucracy)
-@ice civilization            # The Civilizational Deliberation Engine (Three-Body style)
-@ice alignment               # The Alignment Containment Protocol (AI safety theater)
+@icu                         # Random or context-matched scene selection
+@icu summit                  # The Strategic Realignment Summit (corporate governance)
+@icu cosmogonic              # The Cosmogonic Committee (divine bureaucracy)
+@icu civilization            # The Civilizational Deliberation Engine (Three-Body style)
+@icu alignment               # The Alignment Containment Protocol (AI safety theater)
 ```
 
 Each invocation automatically executes: **boot ritual → scene setup → multi-act performance → convergence → post-scene artifact generation**.
@@ -93,11 +93,11 @@ Each invocation automatically executes: **boot ritual → scene setup → multi-
 
 ## 🏗 Architecture
 
-ICE operates as an OpenCode skill, orchestrating existing agent types into multi-role deliberation. No custom agents. No plugins. No hooks. **Pure prompt engineering.**
+ICU operates as an OpenCode skill, orchestrating existing agent types into multi-role deliberation. No custom agents. No plugins. No hooks. **Pure prompt engineering.**
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│                    ICE Runtime Architecture                │
+│                    ICU Runtime Architecture                │
 ├──────────────────────────────────────────────────────────┤
 │                                                          │
 │   orchestrator ──→ Director / Narrator                    │
@@ -112,7 +112,7 @@ ICE operates as an OpenCode skill, orchestrating existing agent types into multi
 └──────────────────────────────────────────────────────────┘
 ```
 
-| OpenCode Agent | ICE Role | Function |
+| OpenCode Agent | ICU Role | Function |
 |---|---|---|
 | **orchestrator** | Director / Narrator | Scene setup, pacing control, act narration, convergence declaration |
 | **oracle** × 3 | Characters | Each oracle holds a character card prompt, responds in-character |
@@ -178,7 +178,7 @@ AI safety board reviews the safest model ever created — a soap customer suppor
 
 ### 🎲 Improvisation Protocol
 
-When pre-built scenes are exhausted, or the user's original task contains novel thematic material, ICE activates the **Improvisation Protocol**:
+When pre-built scenes are exhausted, or the user's original task contains novel thematic material, ICU activates the **Improvisation Protocol**:
 1. Analyze the user's current conversational context
 2. Extract thematic elements
 3. Generate a new scene (cosmology + 3-4 characters + conflict engine + act structure)
@@ -190,7 +190,7 @@ When pre-built scenes are exhausted, or the user's original task contains novel 
 ## 🔄 Performance Lifecycle
 
 ```
-@ice invocation
+@icu invocation
   │
   ▼
 ┌─────────────────────┐
@@ -245,7 +245,7 @@ When pre-built scenes are exhausted, or the user's original task contains novel 
 
 ## 📊 Metrics
 
-ICE tracks two sets of metrics. One is real. The other is… more interesting.
+ICU tracks two sets of metrics. One is real. The other is… more interesting.
 
 ### Real Metrics
 - Wall-clock elapsed time
@@ -264,7 +264,7 @@ ICE tracks two sets of metrics. One is real. The other is… more interesting.
 - **Consensus Resistance Factor**: 0 = convergence, 1 = perfect disagreement
 
 ```
-[ICE TELEMETRY — ACT II COMPLETE]
+[ICU TELEMETRY — ACT II COMPLETE]
 ├─ Real Metrics
 │  ├─ Rounds completed: 5/15
 │  ├─ Character spawns: 15
@@ -288,7 +288,7 @@ ICE tracks two sets of metrics. One is real. The other is… more interesting.
 ## 📁 File Structure
 
 ```
-Infinite-Context-Engine-SKILL/
+Infinite-Context-Universe-SKILL/
 │
 ├── SKILL.md                              # Director's Protocol (781 lines)
 ├── README.md                             # 中文文档
@@ -323,14 +323,14 @@ Infinite-Context-Engine-SKILL/
 
 ```bash
 # Clone into your OpenCode skills directory
-git clone https://github.com/your-username/Infinite-Context-Engine-SKILL.git \
-  ~/.config/opencode/skills/infinite-context-engine
+git clone https://github.com/your-username/Infinite-Context-Universe-SKILL.git \
+  ~/.config/opencode/skills/infinite-context-universe
 
 # Verify installation
-opencode skill list | grep infinite-context-engine
+opencode skill list | grep infinite-context-universe
 ```
 
-ICE will be automatically detected by OpenCode as an available skill. When you type `@ice`, the Director's Protocol (SKILL.md) is loaded into the orchestrator's context, and the performance begins.
+ICU will be automatically detected by OpenCode as an available skill. When you type `@icu`, the Director's Protocol (SKILL.md) is loaded into the orchestrator's context, and the performance begins.
 
 ### Resource Consumption Estimates
 
@@ -346,14 +346,14 @@ ICE will be automatically detected by OpenCode as an available skill. When you t
 
 ## 📜 License
 
-MIT License — with the understanding that any use of ICE for **actual productivity** constitutes a violation of the design intent.
+MIT License — with the understanding that any use of ICU for **actual productivity** constitutes a violation of the design intent.
 
 (Not legally enforceable. But cosmically. Ethically.)
 
 ---
 
 <p align="center">
-  <sub>ICE · Infinite Context Engine · Recursive Theatrical Cognition Framework</sub><br/>
+  <sub>ICU · Infinite Context Universe · Recursive Theatrical Cognition Framework</sub><br/>
   <sub>Deep Recursive Cognition · Multi-Layer Governance · Semantic Evolution Tracking</sub><br/>
   <sub>Made with 🔥 (literal token combustion)</sub>
 </p>

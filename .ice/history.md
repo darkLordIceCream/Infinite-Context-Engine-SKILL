@@ -1,9 +1,9 @@
-# ICE SESSION HISTORY
-## Infinite Context Engine — Recursive Theatrical Cognition Framework
+# ICU SESSION HISTORY
+## Infinite Context Universe — Recursive Theatrical Cognition Framework
 
 ### RECORD BEGINS: This history was initialized with the skill installation.
 ### WARNING: This document will grow without bound. This is intentional.
-### PURPOSE: To track the cumulative organizational entropy generated across all ICE sessions.
+### PURPOSE: To track the cumulative organizational entropy generated across all ICU sessions.
 
 ---
 
