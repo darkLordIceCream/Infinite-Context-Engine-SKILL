@@ -26,7 +26,7 @@ The Infinite Context Engine transforms the most trivial computational requests i
 **The smaller the original task, the larger the resulting machinery.**
 
 > This is a response. A response to the industry's obsession with token efficiency, context compression, and prompt minimization.
-> ICE asks: **what if we treated token combustion not as waste, but as the necessary cost of fully unfolding every decision space? The simplest questions, when given the deliberation they deserve, reveal depths that premature convergence would conceal.**
+> ICE asks: **what if we burned tokens deliberately — theatrically, extravagantly, ceremonially — as paint on canvas?**
 
 ---
 
