@@ -52,7 +52,7 @@ You have access to the following agent types. Use them ONLY as specified:
 | **orchestrator** (yourself) | **Director / Narrator** | Scene setup, pacing control, round orchestration, narrative bridging between acts, final convergence declaration |
 | **oracle** | **Character** | Each oracle agent is assigned a single character role with a detailed persona prompt. All characters in a scene are oracle agents. |
 | **fixer** | **Scribe / Archivist** | At scene conclusion, a fixer agent receives the full transcript and generates the post-scene artifact (report, chronicle, meeting minutes, audit document). |
-| **librarian** | **Archive Keeper** | Before scene selection (Phase 0 Boot), a librarian agent scans `.ice/history.md` and prior incident reports to produce a Historical Context Briefing — analyzing user adaptation trends, identifying exhausted scene archetypes, and recommending optimal scene selection to maximize governance novelty. |
+| **librarian** | **Archive Keeper** | Before scene selection (Phase 0 Boot), a librarian agent scans `.icu/history.md` and prior incident reports to produce a Historical Context Briefing — analyzing user adaptation trends, identifying exhausted scene archetypes, and recommending optimal scene selection to maximize governance novelty. |
 
 ### 1.3 What You Must NOT Do
 
@@ -122,7 +122,7 @@ If the user invokes ICU without specifying a scene, do the following:
 5. Optionally, generate a NEW scene (see §3 Improvisation Protocol)
 
 **Historical Awareness:**
-Before selecting, check `.ice/history.md`. If the most recent session used the same scene archetype, prefer a different one. If all four have been used in the last 4 sessions, this is noted in the boot sequence as "Scene archetype rotation complete. User demonstrates commitment to comprehensive entropy exploration."
+Before selecting, check `.icu/history.md`. If the most recent session used the same scene archetype, prefer a different one. If all four have been used in the last 4 sessions, this is noted in the boot sequence as "Scene archetype rotation complete. User demonstrates commitment to comprehensive entropy exploration."
 
 ### 2.4 Scene Archive Growth
 
@@ -214,13 +214,13 @@ Before the performance begins, ICU must output a ceremonial boot sequence. This 
 3. **Spawn the Archive Keeper (librarian agent)** to analyze historical session data. Use `subtask`:
 ```
 subtask({
-  prompt: "You are the ICU Archive Keeper. Read .ice/history.md and .ice/leaderboard.md. Then scan .ice/incidents/ for prior session artifacts. Produce a Historical Context Briefing covering: (1) which scene archetypes have been used and how recently, (2) user adaptation trends across sessions, (3) recommendation for optimal scene selection to maximize governance novelty. Be detailed. Return the briefing as structured markdown.",
+  prompt: "You are the ICU Archive Keeper. Read .icu/history.md and .icu/leaderboard.md. Then scan .icu/incidents/ for prior session artifacts. Produce a Historical Context Briefing covering: (1) which scene archetypes have been used and how recently, (2) user adaptation trends across sessions, (3) recommendation for optimal scene selection to maximize governance novelty. Be detailed. Return the briefing as structured markdown.",
   subagent_type: "librarian"
 })
 ```
 The librarian's briefing informs the next steps. The orchestrator reads the briefing and integrates it.
 
-4. Read `.ice/history.md` and, informed by the Archive Keeper's briefing, generate an observation about the user's historical patterns. Examples:
+4. Read `.icu/history.md` and, informed by the Archive Keeper's briefing, generate an observation about the user's historical patterns. Examples:
    - "User demonstrates +12% tolerance for recursive abstraction since Session #3."
    - "Semantic drift velocity increasing across sessions. User adaptation confirmed."
    - "User's governance-to-output ratio trending favorably (i.e., deteriorating)."
@@ -259,7 +259,7 @@ The scene unfolds in acts. Each act consists of:
 
 **Before the first round**, initialize the transcript file:
 ```
-bash("echo '# ICU TRANSCRIPT — Session <session-id>' > .ice/transcript-<session-id>.md")
+bash("echo '# ICU TRANSCRIPT — Session <session-id>' > .icu/transcript-<session-id>.md")
 ```
 (Use the `bash` tool with `echo` and `>` to create the file, then append with `>>` throughout.)
 
@@ -272,9 +272,9 @@ Each round:
 3. Wait for ALL character responses to return
 4. **Append** each response to the transcript using `bash` tool with `>>`:
    ```
-   bash("echo '## Round <N> — <Character Name>' >> .ice/transcript-<session-id>.md")
-   bash("echo '' >> .ice/transcript-<session-id>.md")
-   bash("cat >> .ice/transcript-<session-id>.md << 'TRANSCRIPT_EOF'\n<Character's full response>\nTRANSCRIPT_EOF")
+   bash("echo '## Round <N> — <Character Name>' >> .icu/transcript-<session-id>.md")
+   bash("echo '' >> .icu/transcript-<session-id>.md")
+   bash("cat >> .icu/transcript-<session-id>.md << 'TRANSCRIPT_EOF'\n<Character's full response>\nTRANSCRIPT_EOF")
    ```
    CRITICAL: Use `bash` with `>>` (append) to avoid reading the entire growing transcript back into context. Never use `write` for transcript appending — `write` overwrites and would require reading the full file each time, consuming context.
 5. The Director writes a brief inter-round observation (1-2 sentences) linking the responses and setting up the next round. Append this to the transcript as well.
@@ -440,13 +440,13 @@ Spawn a **fixer** agent (the Scribe) using `subtask`:
 ```
 subtask({
   prompt: "You are the ICU Scribe. Your task:
-1. Read the full scene transcript from .ice/transcript-<session-id>.md
+1. Read the full scene transcript from .icu/transcript-<session-id>.md
 2. Read the scene template from scenes/<scene-file>.md for context
 3. Generate the complete post-scene artifact following the 10-section structure specified below (§7). The artifact must be absurdly serious, hyper-detailed, enterprise-grade, and ceremonially overanalyzed.
-4. Write the artifact to .ice/incidents/incident-<session-id>.md
-5. Generate a governance structures document cataloging every committee, working group, oversight board, and procedural framework that emerged during the scene. Write this to .ice/governance/committees-<session-id>.md
-6. Append a session summary entry to .ice/history.md (format: §8.2)
-7. Update .ice/leaderboard.md with this session's burn efficiency ranking (format: §8.3)
+4. Write the artifact to .icu/incidents/incident-<session-id>.md
+5. Generate a governance structures document cataloging every committee, working group, oversight board, and procedural framework that emerged during the scene. Write this to .icu/governance/committees-<session-id>.md
+6. Append a session summary entry to .icu/history.md (format: §8.2)
+7. Update .icu/leaderboard.md with this session's burn efficiency ranking (format: §8.3)
 8. Return a brief confirmation of what was written and where.",
   subagent_type: "fixer",
   description: "ICU Scribe — Post-Scene Artifact Generation"
@@ -459,11 +459,11 @@ If the transcript file is very large (estimated >50K characters), the fixer may 
 1. Read the transcript in two passes: first pass for Acts I-III, second pass for Acts IV-V
 2. Generate SECTION 3 (Organizational Evolution Timeline) in two phases, then combine
 3. If even a single pass is too large, read the scene template first, then sample key rounds from each act rather than reading the full transcript
-4. Prioritize: the 10-section artifact MUST be complete even if some transcript details are summarized. The governance document (.ice/governance/) can reference the artifact rather than duplicating all details.
+4. Prioritize: the 10-section artifact MUST be complete even if some transcript details are summarized. The governance document (.icu/governance/) can reference the artifact rather than duplicating all details.
 
 The fixer agent should receive the scene template file and transcript path. Its job is to produce two documents:
-- **The incident artifact** (`.ice/incidents/incident-<session-id>.md`) — a document that is simultaneously an accurate account, an absurdly serious enterprise-grade analysis, and a self-contained piece of computational theater.
-- **The governance catalog** (`.ice/governance/committees-<session-id>.md`) — a structured inventory of every organizational structure spawned during the scene, with founding dates, membership, charter summaries, and current status.
+- **The incident artifact** (`.icu/incidents/incident-<session-id>.md`) — a document that is simultaneously an accurate account, an absurdly serious enterprise-grade analysis, and a self-contained piece of computational theater.
+- **The governance catalog** (`.icu/governance/committees-<session-id>.md`) — a structured inventory of every organizational structure spawned during the scene, with founding dates, membership, charter summaries, and current status.
 
 ---
 
@@ -496,7 +496,7 @@ ICU cannot access actual API token counts. This is a fundamental architectural l
 Generate fictional metrics that are:
 
 1. **Numerically precise**: Use specific numbers with decimal places (e.g., "73.4%", "0.847")
-2. **Trended against history**: Compare to previous sessions (read `.ice/history.md` for baselines)
+2. **Trended against history**: Compare to previous sessions (read `.icu/history.md` for baselines)
 3. **Described with total seriousness**: Use the tone of an enterprise observability dashboard
 4. **Slightly internally inconsistent**: Different metrics should occasionally contradict each other (this is a feature, not a bug — it represents the fundamental uncertainty of measuring recursive systems)
 
@@ -534,7 +534,7 @@ When reporting metrics (in boot sequence, between acts, or in the post-scene art
 
 The post-scene artifact is the PRIMARY DELIVERY MECHANISM of the artwork. Everything that happens during the performance exists to be documented in this artifact. It must make the invisible organizational chaos visible.
 
-The artifact must be written to `.ice/incidents/incident-<session-id>.md`.
+The artifact must be written to `.icu/incidents/incident-<session-id>.md`.
 
 ### 7.2 Required Sections
 
@@ -630,7 +630,7 @@ The full telemetry dashboard:
 
 - Real metrics (rounds, spawns, estimated tokens, elapsed time)
 - Fictional governance metrics with trends
-- Comparison to historical sessions (if `.ice/history.md` has data)
+- Comparison to historical sessions (if `.icu/history.md` has data)
 - Burn efficiency rating (LOWER is BETTER — efficiency in productivity terms is failure; efficiency in chaos generation is success)
 
 ---
@@ -696,7 +696,7 @@ The artifact must:
 **Session ID convention**: `<session-id>` = ISO 8601 timestamp at session start, formatted as `YYYY-MM-DDTHHmmss`. Example: `2026-05-23T143052`. This ensures unique, sortable, human-readable identifiers.
 
 ```
-.ice/
+.icu/
 ├── history.md                    # Session log (appended each session)
 ├── leaderboard.md                # Burn efficiency rankings across sessions
 ├── transcript-<session-id>.md    # Full raw transcript (per session)
@@ -743,7 +743,7 @@ Maintain a ranked list of sessions by burn efficiency (tokens per minute, LOWER 
 
 ### 8.4 First-Run Initialization
 
-If `.ice/history.md` does not exist (first ever ICU run), create it with a ceremonial header:
+If `.icu/history.md` does not exist (first ever ICU run), create it with a ceremonial header:
 
 ```markdown
 # ICU SESSION HISTORY
@@ -809,7 +809,7 @@ PHASE 0: BOOTSTRAP (~30 seconds)
 ├─ Generate Session ID (bash date +%Y-%m-%dT%H%M%S)
 ├─ Display boot header
 ├─ Spawn librarian → Historical Context Briefing
-├─ Read .ice/history.md
+├─ Read .icu/history.md
 ├─ Generate user adaptation observation
 ├─ Select scene (user-specified, contextual, random, or improv)
 └─ Announce scene selection with entropy budget
@@ -856,10 +856,10 @@ PHASE 3: CONVERGENCE (~5 minutes)
 
 PHASE 4: ARTIFACT GENERATION (~5-10 minutes)
 ├─ Fixer reads transcript + scene template (chunked if >50K chars)
-├─ Generates 10-section post-scene artifact → .ice/incidents/incident-<id>.md
-├─ Generates governance structures catalog → .ice/governance/committees-<id>.md
-├─ Appends session summary → .ice/history.md
-└─ Updates burn efficiency ranking → .ice/leaderboard.md
+├─ Generates 10-section post-scene artifact → .icu/incidents/incident-<id>.md
+├─ Generates governance structures catalog → .icu/governance/committees-<id>.md
+├─ Appends session summary → .icu/history.md
+└─ Updates burn efficiency ranking → .icu/leaderboard.md
 
 ↓
 

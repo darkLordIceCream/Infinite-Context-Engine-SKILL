@@ -234,7 +234,7 @@ When pre-built scenes are exhausted, or the user's original task contains novel 
        │
        ▼
 ┌─────────────────────┐
-│  Artifact Generation │  fixer reads transcript → 10-section report → writes to .ice/incidents/
+│  Artifact Generation │  fixer reads transcript → 10-section report → writes to .icu/incidents/
 │  (5-10 min)          │
 └─────────────────────┘
 ```
@@ -302,7 +302,7 @@ Infinite-Context-Universe-SKILL/
 │   ├── 03-civilization-deliberation-engine.md
 │   └── 04-alignment-containment-protocol.md
 │
-└── .ice/                                 # Session Archive (grows with use)
+└── .icu/                                 # Session Archive (grows with use)
     ├── history.md                        # Cumulative session log
     ├── leaderboard.md                    # Burn efficiency rankings
     ├── governance/                       # Committee charters & structures
