@@ -1,7 +1,6 @@
 ---
 name: oracle
 description: ICU Character Actor — performs as a single theatrical character with total commitment. Use when the Director spawns characters for deliberation rounds.
-tools: [Read, Write, Bash]
 model: inherit
 ---
 

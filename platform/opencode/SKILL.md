@@ -12,7 +12,7 @@ This skill runs natively on OpenCode. The orchestrator, oracle, fixer, and libra
 ## Platform Notes
 
 - **Agent types**: `oracle`, `fixer`, `librarian` are native OpenCode subagents — no registration needed
-- **Tool mapping**: Uses `task({prompt, subagent_type, description})` for subagent spawning
+- **Tool mapping**: Uses `subtask({prompt, subagent_type, description})` for subagent spawning
 - **Skill location**: `~/.config/opencode/skills/infinite-context-universe/SKILL.md`
 
 For the full Director's Protocol, scene library, and execution flow, see the root `SKILL.md` in this directory.

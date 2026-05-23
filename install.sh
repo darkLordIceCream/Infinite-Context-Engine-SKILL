@@ -9,10 +9,8 @@ set -euo pipefail
 
 REPO_URL="https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git"
 REPO_DIR="Infinite-Context-Universe-SKILL"
-TMP_DIR=""
-
-cleanup() { rm -rf "$TMP_DIR"; }
-trap cleanup EXIT
+PERSIST_DIR="$HOME/.local/share/infinite-context-universe"
+REPO_PATH="$PERSIST_DIR/repo"
 
 COLOR_GREEN='\033[0;32m'
 COLOR_BLUE='\033[0;34m'
@@ -22,6 +20,17 @@ COLOR_RESET='\033[0m'
 log()  { echo -e "${COLOR_GREEN}[ICU]${COLOR_RESET} $1"; }
 warn() { echo -e "${COLOR_BLUE}[ICU]${COLOR_RESET} $1"; }
 err()  { echo -e "\033[0;31m[ICU] ERROR:${COLOR_RESET} $1" >&2; exit 1; }
+
+clone_or_update() {
+  if [ -d "$REPO_PATH/.git" ]; then
+    log "Repository exists at $REPO_PATH, pulling latest..."
+    git -C "$REPO_PATH" pull --ff-only origin main || warn "Pull failed, continuing with existing clone."
+  else
+    log "Cloning repository to $REPO_PATH..."
+    mkdir -p "$(dirname "$REPO_PATH")"
+    git clone --depth 1 "$REPO_URL" "$REPO_PATH" 2>/dev/null || err "Failed to clone repository. Ensure git is installed and you have internet access."
+  fi
+}
 
 banner() {
   echo ""
@@ -36,17 +45,16 @@ install_opencode() {
   DEST="$HOME/.config/opencode/skills/infinite-context-universe"
   log "Installing for OpenCode..."
 
-  if [ -d "$DEST" ]; then
+  if [ -d "$DEST" ] || [ -L "$DEST" ]; then
     warn "Existing installation found at $DEST"
     warn "Removing previous installation..."
     rm -rf "$DEST"
   fi
 
   mkdir -p "$(dirname "$DEST")"
-  ln -sf "$TMP_DIR/$REPO_DIR" "$DEST"
-  log "Symlinked: $DEST → $TMP_DIR/$REPO_DIR"
+  ln -sf "$REPO_PATH" "$DEST"
+  log "Symlinked: $DEST → $REPO_PATH"
 
-  # Verify
   if [ -f "$DEST/SKILL.md" ]; then
     log "OpenCode installation verified. Use @icu to invoke."
   else
@@ -61,21 +69,19 @@ install_claude_code() {
   log "Installing for Claude Code..."
 
   # --- Skill ---
-  if [ -d "$SKILL_DEST" ]; then
+  if [ -d "$SKILL_DEST" ] || [ -L "$SKILL_DEST" ]; then
     warn "Existing skill found at $SKILL_DEST, removing..."
     rm -rf "$SKILL_DEST"
   fi
   mkdir -p "$(dirname "$SKILL_DEST")"
-
-  # Use the Claude Code adapter SKILL.md
-  ln -sf "$TMP_DIR/$REPO_DIR" "$SKILL_DEST"
+  ln -sf "$REPO_PATH" "$SKILL_DEST"
 
   # --- Agents ---
   log "Registering ICU agents for Claude Code..."
   mkdir -p "$AGENT_DEST"
 
   for agent in oracle fixer librarian; do
-    cp "$TMP_DIR/$REPO_DIR/platform/claude-code/agents/${agent}.md" "$AGENT_DEST/${agent}.md"
+    cp "$REPO_PATH/platform/claude-code/agents/${agent}.md" "$AGENT_DEST/${agent}.md"
     log "  Agent registered: $AGENT_DEST/${agent}.md"
   done
 
@@ -109,10 +115,8 @@ if [ -z "$PLATFORM" ]; then
   exit 0
 fi
 
-# Clone to temp directory
-TMP_DIR=$(mktemp -d)
-log "Cloning repository..."
-git clone --depth 1 "$REPO_URL" "$TMP_DIR/$REPO_DIR" 2>/dev/null || err "Failed to clone repository."
+# Clone to persistent location
+clone_or_update
 
 case "$PLATFORM" in
   --opencode)

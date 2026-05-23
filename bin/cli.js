@@ -35,14 +35,27 @@ function usage() {
 }
 
 function cloneRepo() {
-  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'icu-'));
-  log(`Cloning repository to ${tmpDir}...`);
-  try {
-    execSync(`git clone --depth 1 ${REPO_URL} "${tmpDir}/repo"`, { stdio: 'pipe' });
-  } catch {
-    err('Failed to clone repository. Check your internet connection.');
+  const persistDir = path.join(os.homedir(), '.local', 'share', 'infinite-context-universe');
+  const repoPath = path.join(persistDir, 'repo');
+
+  if (fs.existsSync(path.join(repoPath, '.git'))) {
+    log(`Repository exists at ${repoPath}, pulling latest...`);
+    try {
+      execSync(`git -C "${repoPath}" pull --ff-only origin main`, { stdio: 'pipe' });
+    } catch {
+      warn('Pull failed, continuing with existing clone.');
+    }
+    return repoPath;
   }
-  return path.join(tmpDir, 'repo');
+
+  log(`Cloning repository to ${repoPath}...`);
+  fs.mkdirSync(persistDir, { recursive: true });
+  try {
+    execSync(`git clone --depth 1 ${REPO_URL} "${repoPath}"`, { stdio: 'pipe' });
+  } catch {
+    err('Failed to clone repository. Ensure git is installed and you have internet access.');
+  }
+  return repoPath;
 }
 
 function installOpenCode(repoDir) {

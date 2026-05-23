@@ -196,7 +196,7 @@ Before the performance begins, ICU must output a ceremonial boot sequence. This 
 1. Display a stylized ASCII or text-based boot header:
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║              INFINITE CONTEXT ENGINE v0.1.0                  ║
+║              INFINITE CONTEXT UNIVERSE v0.1.0                  ║
 ║         Recursive Theatrical Cognition Framework             ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
