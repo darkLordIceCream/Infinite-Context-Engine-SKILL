@@ -85,9 +85,14 @@ Agent 会自动读取安装指南，完成克隆、链接和注册。
 curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --opencode
 ```
 
-**npx:**
+**npx (项目局部安装，默认):**
 ```bash
 npx install-infinite-context-universe --opencode
+```
+
+**npx (全局安装):**
+```bash
+npx install-infinite-context-universe --opencode --global
 ```
 
 ### 使用

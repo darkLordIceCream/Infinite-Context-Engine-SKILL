@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Infinite Context Universe — One-Line Installer
+# Infinite Context Universe — One-Line Installer (global install)
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --opencode
 #   curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --claude-code
 #   curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --all
+#
+# For project-local install (into ./.opencode/skills/), use npx instead:
+#   npx install-infinite-context-universe --opencode
 
 REPO_URL="https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git"
 REPO_DIR="Infinite-Context-Universe-SKILL"
@@ -103,7 +106,11 @@ PLATFORM="${1:-}"
 if [ -z "$PLATFORM" ]; then
   echo "Usage: install.sh [--opencode | --claude-code | --all]"
   echo ""
-  echo "One-liners:"
+  echo "This script installs ICU to your user-global skill directory (~/.config/opencode/skills/)."
+  echo "For project-local install (into ./.opencode/skills/), use npx:"
+  echo "  npx install-infinite-context-universe --opencode"
+  echo ""
+  echo "One-liners (global):"
   echo "  # OpenCode"
   echo "  curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --opencode"
   echo ""

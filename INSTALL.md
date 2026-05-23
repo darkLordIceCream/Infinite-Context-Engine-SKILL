@@ -4,7 +4,49 @@
 
 ---
 
+## Quick: Project-Local Install (recommended)
+
+Installs ICU **into the current project** (`.opencode/skills/`) without touching your global config:
+
+```bash
+npx install-infinite-context-universe --opencode
+```
+
+This clones the repo directly into `.opencode/skills/infinite-context-universe` within your project.
+
+For user-global install (works across all projects), add `--global`:
+```bash
+npx install-infinite-context-universe --opencode --global
+```
+
+---
+
 ## For OpenCode
+
+### Option A: Project-Local (recommended)
+
+Installs into the current project only. No global side effects.
+
+1. **Run the npx installer** (from your project root):
+   ```bash
+   npx install-infinite-context-universe --opencode
+   ```
+
+2. **Or, manually** clone directly into your project:
+   ```bash
+   mkdir -p .opencode/skills
+   git clone --depth 1 https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git .opencode/skills/infinite-context-universe
+   ```
+
+3. **Verify**:
+   ```bash
+   test -f .opencode/skills/infinite-context-universe/SKILL.md && echo "INSTALL OK" || echo "INSTALL FAILED"
+   ```
+   Expected: `INSTALL OK`
+
+### Option B: User-Global
+
+Installs once, available across all projects.
 
 1. **Clone the repository** to a persistent location:
    ```bash
