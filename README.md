@@ -39,7 +39,6 @@ Infinite Context Universe 将最微不足道的计算请求，转化为文明量
 - [一场演出的生命周期](#-一场演出的生命周期)
 - [性能指标](#-性能指标)
 - [文件结构](#-文件结构)
-- [安装](#-安装)
 - [许可](#-许可)
 
 ---
@@ -68,13 +67,40 @@ ICU 的测量标准与一切正规模板相反：
 
 ## 🚀 快速开始
 
+### 一行安装
+
+**OpenCode:**
 ```bash
-# 克隆到 OpenCode skills 目录
-git clone https://github.com/your-username/Infinite-Context-Universe-SKILL.git \
-  ~/.config/opencode/skills/infinite-context-universe
+curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --opencode
 ```
 
-然后在 OpenCode 会话中：
+**Claude Code:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --claude-code
+```
+
+**同时安装两个平台:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --all
+```
+
+**通过 npx（无需克隆，自动安装）:**
+```bash
+npx install-infinite-context-universe --opencode
+npx install-infinite-context-universe --claude-code
+```
+
+### 手动安装
+
+```bash
+git clone https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git
+cd Infinite-Context-Universe-SKILL
+bash install.sh --opencode    # 或 --claude-code / --all
+```
+
+### 使用
+
+安装后在 OpenCode / Claude Code 会话中：
 
 ```
 @icu                         # 随机或上下文匹配一个场景
@@ -88,11 +114,29 @@ git clone https://github.com/your-username/Infinite-Context-Universe-SKILL.git \
 
 > ⚠️ 文明级演出（~100K tokens）预计耗时 30-60 分钟。这是介质本身，不是 bug。
 
+### 平台支持
+
+| 平台 | 状态 | 安装方式 |
+|---|---|---|
+| **OpenCode** | ✅ 原生支持 | `install.sh --opencode` / `npx ... --opencode` |
+| **Claude Code** | ✅ 适配完成 | `install.sh --claude-code` / `npx ... --claude-code` |
+| **Codex (OpenAI)** | 🔮 计划中 | — |
+
+### 资源消耗预期
+
+| 场景规模 | 估算 Token 消耗 | 预计耗时 | 费用估算 (DeepSeek) |
+|---|---|---|---|
+| 轻量级 (3 幕) | ~30,000 tokens | ~15 分钟 | ~$0.03 |
+| 标准级 (4 幕) | ~60,000 tokens | ~30 分钟 | ~$0.06 |
+| **文明级 (5 幕)** | **~100,000 tokens** | **~45-60 分钟** | **~$0.10** |
+
+> 这些不是 bug。这些是介质本身。你购买的不是一次 AI 调用。你购买的是一张数字文明崩坏前排座位的门票。
+
 ---
 
 ## 🏗 架构
 
-ICU 作为 OpenCode skill 运行，将现有 agent 类型编排为多角色审议系统。无自定义 agent。无插件。无 hook。**纯 prompt 工程驱动。**
+ICU 作为跨平台 skill 运行，将 agent 类型编排为多角色审议系统。OpenCode 原生支持 agent 类型，Claude Code 需轻量注册。无插件。无 hook。**纯 prompt 工程驱动。**
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -283,11 +327,23 @@ ICU 追踪两套指标。一套是真实的。另一套是……更有趣的。
 ```
 Infinite-Context-Universe-SKILL/
 │
-├── SKILL.md                              # 导演协议 (781 行)
+├── SKILL.md                              # 导演协议 (882 行)
 ├── README.md                             # 本文档 (中文)
 ├── README-en.md                          # English version
+├── install.sh                            # 一键安装脚本
+├── package.json                          # npx 包配置
+├── bin/cli.js                            # npx 安装 CLI
 ├── LICENSE                               # MIT
 ├── .gitignore
+│
+├── platform/                             # 平台适配
+│   ├── opencode/SKILL.md                 # OpenCode 适配
+│   └── claude-code/                      # Claude Code 适配
+│       ├── SKILL.md                      # Claude Code 版导演协议
+│       └── agents/                       # 子 agent 定义
+│           ├── oracle.md
+│           ├── fixer.md
+│           └── librarian.md
 │
 ├── scenes/                               # 场景模板库
 │   ├── 01-strategic-realignment-summit.md
@@ -303,37 +359,6 @@ Infinite-Context-Universe-SKILL/
     └── incidents/                        # 事后文物报告
         └── incident-<session-id>.md      # ⭐ 这是核心交付物
 ```
-
----
-
-## 💾 安装
-
-### 前置条件
-- [OpenCode](https://github.com/opencode-ai/opencode) CLI 已安装并配置
-- 已配置至少一个 LLM provider（DeepSeek、Claude、OpenAI 等）
-
-### 安装步骤
-
-```bash
-# 克隆到 OpenCode skills 目录
-git clone https://github.com/your-username/Infinite-Context-Universe-SKILL.git \
-  ~/.config/opencode/skills/infinite-context-universe
-
-# 验证安装
-opencode skill list | grep infinite-context-universe
-```
-
-ICU 将被 OpenCode 自动检测为可用 skill。当你输入 `@icu` 时，导演协议（SKILL.md）将被加载到 orchestrator 的上下文中，演出开始。
-
-### 资源消耗预期
-
-| 场景规模 | 估算 Token 消耗 | 预计耗时 | 费用估算 (DeepSeek) |
-|---|---|---|---|
-| 轻量级 (3 幕) | ~30,000 tokens | ~15 分钟 | ~$0.03 |
-| 标准级 (4 幕) | ~60,000 tokens | ~30 分钟 | ~$0.06 |
-| **文明级 (5 幕)** | **~100,000 tokens** | **~45-60 分钟** | **~$0.10** |
-
-> 这些不是 bug。这些是介质本身。你购买的不是一次 AI 调用。你购买的是一张数字文明崩坏前排座位的门票。
 
 ---
 

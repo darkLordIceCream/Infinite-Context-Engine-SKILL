@@ -1,0 +1,32 @@
+{
+  "name": "infinite-context-universe",
+  "version": "0.1.0",
+  "description": "Infinite Context Universe — recursive theatrical cognition framework. One-command installer for OpenCode and Claude Code.",
+  "bin": {
+    "install-infinite-context-universe": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "platform/",
+    "scenes/",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode",
+    "claude-code",
+    "skill",
+    "ai-agent",
+    "recursive-cognition",
+    "computational-theater",
+    "token-combustion",
+    "governance-simulation"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git"
+  },
+  "homepage": "https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL#readme"
+}

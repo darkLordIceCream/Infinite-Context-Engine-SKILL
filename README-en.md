@@ -39,7 +39,6 @@ The Infinite Context Universe transforms the most trivial computational requests
 - [Performance Lifecycle](#-performance-lifecycle)
 - [Metrics](#-metrics)
 - [File Structure](#-file-structure)
-- [Installation](#-installation)
 - [License](#-license)
 
 ---
@@ -69,13 +68,40 @@ The user does not receive an answer. The user receives an **incident report** fr
 
 ## 🚀 Quick Start
 
+### One-Line Install
+
+**OpenCode:**
 ```bash
-# Clone into your OpenCode skills directory
-git clone https://github.com/your-username/Infinite-Context-Universe-SKILL.git \
-  ~/.config/opencode/skills/infinite-context-universe
+curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --opencode
 ```
 
-Then in an OpenCode session:
+**Claude Code:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --claude-code
+```
+
+**Both platforms:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --all
+```
+
+**Via npx (no clone required):**
+```bash
+npx install-infinite-context-universe --opencode
+npx install-infinite-context-universe --claude-code
+```
+
+### Manual Install
+
+```bash
+git clone https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git
+cd Infinite-Context-Universe-SKILL
+bash install.sh --opencode    # or --claude-code / --all
+```
+
+### Usage
+
+After installation, in your OpenCode / Claude Code session:
 
 ```
 @icu                         # Random or context-matched scene selection
@@ -89,11 +115,29 @@ Each invocation automatically executes: **boot ritual → scene setup → multi-
 
 > ⚠️ A civilization-scale performance (~100K tokens) takes 30-60 minutes. This is the medium itself, not a bug.
 
+### Platform Support
+
+| Platform | Status | Install |
+|---|---|---|
+| **OpenCode** | ✅ Native | `install.sh --opencode` / `npx ... --opencode` |
+| **Claude Code** | ✅ Adapted | `install.sh --claude-code` / `npx ... --claude-code` |
+| **Codex (OpenAI)** | 🔮 Planned | — |
+
+### Resource Consumption Estimates
+
+| Scene Scale | Est. Token Burn | Est. Duration | Est. Cost (DeepSeek) |
+|---|---|---|---|
+| Lightweight (3 acts) | ~30,000 tokens | ~15 min | ~$0.03 |
+| Standard (4 acts) | ~60,000 tokens | ~30 min | ~$0.06 |
+| **Civilization-scale (5 acts)** | **~100,000 tokens** | **~45-60 min** | **~$0.10** |
+
+> These are not bugs. These are the medium. You are not purchasing an AI call. You are purchasing a front-row seat to the collapse of a digital civilization.
+
 ---
 
 ## 🏗 Architecture
 
-ICU operates as an OpenCode skill, orchestrating existing agent types into multi-role deliberation. No custom agents. No plugins. No hooks. **Pure prompt engineering.**
+ICU operates as a platform-adaptable skill, orchestrating agent types into multi-role deliberation. No custom agents on OpenCode (native types). Light agent registration on Claude Code. No plugins. No hooks. **Pure prompt engineering.**
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -290,11 +334,23 @@ ICU tracks two sets of metrics. One is real. The other is… more interesting.
 ```
 Infinite-Context-Universe-SKILL/
 │
-├── SKILL.md                              # Director's Protocol (781 lines)
+├── SKILL.md                              # Director's Protocol (882 lines)
 ├── README.md                             # 中文文档
 ├── README-en.md                          # This document (English)
+├── install.sh                            # One-line install script
+├── package.json                          # npx package config
+├── bin/cli.js                            # npx install CLI
 ├── LICENSE                               # MIT
 ├── .gitignore
+│
+├── platform/                             # Platform adapters
+│   ├── opencode/SKILL.md                 # OpenCode adapter
+│   └── claude-code/                      # Claude Code adapter
+│       ├── SKILL.md                      # Claude Code Director's Protocol
+│       └── agents/                       # Subagent definitions
+│           ├── oracle.md
+│           ├── fixer.md
+│           └── librarian.md
 │
 ├── scenes/                               # Scene Template Library
 │   ├── 01-strategic-realignment-summit.md
@@ -310,37 +366,6 @@ Infinite-Context-Universe-SKILL/
     └── incidents/                        # Post-scene artifact reports
         └── incident-<session-id>.md      # ⭐ The centerpiece deliverable
 ```
-
----
-
-## 💾 Installation
-
-### Prerequisites
-- [OpenCode](https://github.com/opencode-ai/opencode) CLI installed and configured
-- At least one LLM provider configured (DeepSeek, Claude, OpenAI, etc.)
-
-### Setup
-
-```bash
-# Clone into your OpenCode skills directory
-git clone https://github.com/your-username/Infinite-Context-Universe-SKILL.git \
-  ~/.config/opencode/skills/infinite-context-universe
-
-# Verify installation
-opencode skill list | grep infinite-context-universe
-```
-
-ICU will be automatically detected by OpenCode as an available skill. When you type `@icu`, the Director's Protocol (SKILL.md) is loaded into the orchestrator's context, and the performance begins.
-
-### Resource Consumption Estimates
-
-| Scene Scale | Est. Token Burn | Est. Duration | Est. Cost (DeepSeek) |
-|---|---|---|---|
-| Lightweight (3 acts) | ~30,000 tokens | ~15 min | ~$0.03 |
-| Standard (4 acts) | ~60,000 tokens | ~30 min | ~$0.06 |
-| **Civilization-scale (5 acts)** | **~100,000 tokens** | **~45-60 min** | **~$0.10** |
-
-> These are not bugs. These are the medium. You are not purchasing an AI call. You are purchasing a front-row seat to the collapse of a digital civilization.
 
 ---
 
