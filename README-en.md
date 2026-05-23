@@ -10,8 +10,8 @@
 
 <br/>
 
-> **ICE holds that behind every computational task lies a civilization-scale deliberation worth unfolding.**
-> *Premature convergence is a failure to respect the complexity of the problem.*
+> *"I asked the AI to change a button color.*
+> *One hour later, I received a flight recorder report from a collapsing digital civilization."*
 
 <br/>
 
