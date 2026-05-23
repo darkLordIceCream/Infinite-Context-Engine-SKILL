@@ -68,35 +68,39 @@ The user does not receive an answer. The user receives an **incident report** fr
 
 ## 🚀 Quick Start
 
-### One-Line Install
+### One-Line Install (paste to your AI Agent)
+
+Copy the prompt below and send it to your OpenCode or Claude Code. The Agent handles cloning, linking, and registration automatically:
 
 **OpenCode:**
+```
+Please install the Infinite Context Universe skill. Clone
+https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL to
+~/.config/opencode/skills/infinite-context-universe (symlink is fine),
+then verify SKILL.md exists.
+```
+
+**Claude Code:**
+```
+Please install the Infinite Context Universe skill for Claude Code.
+1. Clone https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL to
+   ~/.local/share/infinite-context-universe/repo
+2. Symlink it to ~/.claude/skills/infinite-context-universe
+3. Copy oracle.md, fixer.md, librarian.md from platform/claude-code/agents/
+   to ~/.claude/agents/
+4. Verify all files are in place.
+```
+
+### Alternative Methods
+
+**Shell one-liner:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --opencode
 ```
 
-**Claude Code:**
-```bash
-curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --claude-code
-```
-
-**Both platforms:**
-```bash
-curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --all
-```
-
-**Via npx (no clone required):**
+**npx:**
 ```bash
 npx install-infinite-context-universe --opencode
-npx install-infinite-context-universe --claude-code
-```
-
-### Manual Install
-
-```bash
-git clone https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git
-cd Infinite-Context-Universe-SKILL
-bash install.sh --opencode    # or --claude-code / --all
 ```
 
 ### Usage
@@ -119,8 +123,8 @@ Each invocation automatically executes: **boot ritual → scene setup → multi-
 
 | Platform | Status | Install |
 |---|---|---|
-| **OpenCode** | ✅ Native | `install.sh --opencode` / `npx ... --opencode` |
-| **Claude Code** | ✅ Adapted | `install.sh --claude-code` / `npx ... --claude-code` |
+| **OpenCode** | ✅ Native | Send install prompt / `curl \| bash` / `npx` |
+| **Claude Code** | ✅ Adapted | Send install prompt / `curl \| bash` / `npx` |
 | **Codex (OpenAI)** | 🔮 Planned | — |
 
 ### Resource Consumption Estimates

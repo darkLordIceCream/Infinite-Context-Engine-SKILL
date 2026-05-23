@@ -67,35 +67,39 @@ ICU 的测量标准与一切正规模板相反：
 
 ## 🚀 快速开始
 
-### 一行安装
+### 一句话安装（发给 AI Agent 即可）
+
+复制下面的话，发给你的 OpenCode 或 Claude Code，Agent 会自动完成克隆、链接、注册：
 
 **OpenCode:**
+```
+请安装 Infinite Context Universe 技能。
+克隆 https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL 到
+~/.config/opencode/skills/infinite-context-universe（symlink 即可），
+然后验证 SKILL.md 存在。
+```
+
+**Claude Code:**
+```
+请安装 Infinite Context Universe 技能到 Claude Code。
+1. 克隆 https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL 到
+   ~/.local/share/infinite-context-universe/repo
+2. symlink 到 ~/.claude/skills/infinite-context-universe
+3. 将 platform/claude-code/agents/ 下的 oracle.md、fixer.md、librarian.md
+   复制到 ~/.claude/agents/
+4. 验证所有文件到位。
+```
+
+### 其他安装方式
+
+**Shell 一键:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --opencode
 ```
 
-**Claude Code:**
-```bash
-curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --claude-code
-```
-
-**同时安装两个平台:**
-```bash
-curl -fsSL https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/install.sh | bash -s -- --all
-```
-
-**通过 npx（无需克隆，自动安装）:**
+**npx:**
 ```bash
 npx install-infinite-context-universe --opencode
-npx install-infinite-context-universe --claude-code
-```
-
-### 手动安装
-
-```bash
-git clone https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git
-cd Infinite-Context-Universe-SKILL
-bash install.sh --opencode    # 或 --claude-code / --all
 ```
 
 ### 使用
