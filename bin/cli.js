@@ -118,18 +118,34 @@ function installOpenCode(globalMode) {
 
 /** Install the Claude Code skill and register agents */
 function installClaudeCode(repoDir) {
-  const skillDest = path.join(os.homedir(), '.claude', 'skills', 'infinite-context-universe');
+  const skillDir = path.join(os.homedir(), '.claude', 'skills', 'infinite-context-universe');
   const agentDest = path.join(os.homedir(), '.claude', 'agents');
 
   log('Installing for Claude Code...');
 
-  // Skill
-  if (fs.existsSync(skillDest)) {
+  // Create skill directory as a real directory (not a symlink to repo root)
+  // This lets us link the Claude Code SKILL.md as the entry point
+  // while still providing access to data directories (scenes/)
+  if (fs.existsSync(skillDir)) {
     warn('Existing skill found, removing...');
-    fs.rmSync(skillDest, { recursive: true, force: true });
+    fs.rmSync(skillDir, { recursive: true, force: true });
   }
-  fs.mkdirSync(path.dirname(skillDest), { recursive: true });
-  fs.symlinkSync(repoDir, skillDest, 'dir');
+  fs.mkdirSync(skillDir, { recursive: true });
+
+  // Link the Claude Code SKILL.md as the skill entry point
+  const skillSrc = path.join(repoDir, 'platform', 'claude-code', 'SKILL.md');
+  fs.symlinkSync(skillSrc, path.join(skillDir, 'SKILL.md'));
+  log(`  SKILL.md → platform/claude-code/SKILL.md`);
+
+  // Link data directories required by the skill protocol
+  const dataDirs = ['scenes'];
+  for (const dir of dataDirs) {
+    const src = path.join(repoDir, dir);
+    if (fs.existsSync(src)) {
+      fs.symlinkSync(src, path.join(skillDir, dir), 'dir');
+      log(`  Data linked: ${dir}/`);
+    }
+  }
 
   // Agents
   log('Registering ICU agents...');
@@ -142,16 +158,21 @@ function installClaudeCode(repoDir) {
     log(`  Agent registered: ${dst}`);
   }
 
-  // Verify
-  const skillOk = fs.existsSync(path.join(skillDest, 'platform', 'claude-code', 'SKILL.md'));
+  // Verify: the Claude Code SKILL.md is at the skill root, and data is accessible
+  const skillOk = fs.existsSync(path.join(skillDir, 'SKILL.md'));
+  const scenesOk = fs.existsSync(path.join(skillDir, 'scenes'));
   const agentsOk = ['oracle', 'fixer', 'librarian'].every(a =>
     fs.existsSync(path.join(agentDest, `${a}.md`))
   );
 
-  if (skillOk && agentsOk) {
+  if (skillOk && scenesOk && agentsOk) {
     log('Claude Code installation verified. Use @icu to invoke.');
   } else {
-    err('Installation verification failed.');
+    let msgs = [];
+    if (!skillOk) msgs.push('Claude Code SKILL.md not found at skill root.');
+    if (!scenesOk) msgs.push('scenes/ directory not accessible.');
+    if (!agentsOk) msgs.push('Agent registration incomplete.');
+    err(msgs.join(' '));
   }
 }
 

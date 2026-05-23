@@ -66,18 +66,31 @@ install_opencode() {
 }
 
 install_claude_code() {
-  SKILL_DEST="$HOME/.claude/skills/infinite-context-universe"
+  SKILL_DIR="$HOME/.claude/skills/infinite-context-universe"
   AGENT_DEST="$HOME/.claude/agents"
 
   log "Installing for Claude Code..."
 
   # --- Skill ---
-  if [ -d "$SKILL_DEST" ] || [ -L "$SKILL_DEST" ]; then
-    warn "Existing skill found at $SKILL_DEST, removing..."
-    rm -rf "$SKILL_DEST"
+  # Create skill directory as a real directory (not a symlink to repo root)
+  # This lets us link the Claude Code SKILL.md as the entry point
+  if [ -d "$SKILL_DIR" ] || [ -L "$SKILL_DIR" ]; then
+    warn "Existing skill found at $SKILL_DIR, removing..."
+    rm -rf "$SKILL_DIR"
   fi
-  mkdir -p "$(dirname "$SKILL_DEST")"
-  ln -sf "$REPO_PATH" "$SKILL_DEST"
+  mkdir -p "$SKILL_DIR"
+
+  # Link the Claude Code SKILL.md as the skill entry point
+  ln -sf "$REPO_PATH/platform/claude-code/SKILL.md" "$SKILL_DIR/SKILL.md"
+  log "  SKILL.md → platform/claude-code/SKILL.md"
+
+  # Link data directories needed by the skill protocol
+  for dir in scenes; do
+    if [ -d "$REPO_PATH/$dir" ]; then
+      ln -sf "$REPO_PATH/$dir" "$SKILL_DIR/$dir"
+      log "  Data linked: $dir/"
+    fi
+  done
 
   # --- Agents ---
   log "Registering ICU agents for Claude Code..."
@@ -88,8 +101,9 @@ install_claude_code() {
     log "  Agent registered: $AGENT_DEST/${agent}.md"
   done
 
-  # Verify
-  if [ -f "$SKILL_DEST/platform/claude-code/SKILL.md" ] && \
+  # Verify: the Claude Code SKILL.md is at the skill root, and data is accessible
+  if [ -f "$SKILL_DIR/SKILL.md" ] && \
+     [ -d "$SKILL_DIR/scenes" ] && \
      [ -f "$AGENT_DEST/oracle.md" ] && \
      [ -f "$AGENT_DEST/fixer.md" ] && \
      [ -f "$AGENT_DEST/librarian.md" ]; then

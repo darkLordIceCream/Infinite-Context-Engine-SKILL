@@ -77,29 +77,33 @@ Installs once, available across all projects.
 
 ## For Claude Code
 
+**Claude Code skills are user-global only. Requires `--global` when using npx installer.**
+
 1. **Clone the repository** to a persistent location:
    ```bash
    mkdir -p ~/.local/share/infinite-context-universe
    git clone --depth 1 https://github.com/darkLordIceCream/Infinite-Context-Universe-SKILL.git ~/.local/share/infinite-context-universe/repo
    ```
 
-2. **Symlink to Claude Code skills directory**:
+2. **Create the skill directory and link the Claude Code adapter**:
    ```bash
-   mkdir -p ~/.claude/skills
-   ln -sf ~/.local/share/infinite-context-universe/repo ~/.claude/skills/infinite-context-universe
+   mkdir -p ~/.claude/skills/infinite-context-universe
+   ln -sf ~/.local/share/infinite-context-universe/repo/platform/claude-code/SKILL.md ~/.claude/skills/infinite-context-universe/SKILL.md
+   ln -sf ~/.local/share/infinite-context-universe/repo/scenes ~/.claude/skills/infinite-context-universe/scenes
    ```
 
 3. **Register subagents** (Claude Code requires agent definitions):
    ```bash
    mkdir -p ~/.claude/agents
    for agent in oracle fixer librarian; do
-     cp "~/.local/share/infinite-context-universe/repo/platform/claude-code/agents/${agent}.md" "~/.claude/agents/${agent}.md"
+     cp ~/.local/share/infinite-context-universe/repo/platform/claude-code/agents/${agent}.md ~/.claude/agents/${agent}.md
    done
    ```
 
 4. **Verify**:
    ```bash
-   test -f ~/.claude/skills/infinite-context-universe/platform/claude-code/SKILL.md && \
+   test -f ~/.claude/skills/infinite-context-universe/SKILL.md && \
+   test -d ~/.claude/skills/infinite-context-universe/scenes && \
    test -f ~/.claude/agents/oracle.md && \
    test -f ~/.claude/agents/fixer.md && \
    test -f ~/.claude/agents/librarian.md && \
@@ -118,7 +122,7 @@ Installs once, available across all projects.
 
 ## For Both Platforms
 
-To install on both OpenCode and Claude Code simultaneously, run the platform-specific sections above in sequence. The shared clone at `~/.local/share/infinite-context-universe/repo` means only one `git clone` is needed.
+To install on both OpenCode and Claude Code simultaneously, run the platform-specific sections above in sequence. The shared clone at `~/.local/share/infinite-context-universe/repo` means only one `git clone` is needed. Note: Claude Code requires `--global` when using the npx installer (`npx install-infinite-context-universe --all --global`).
 
 ---
 
