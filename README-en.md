@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/ICE-Recursive_Theatrical_Cognition-black?style=for-the-badge" alt="ICE"/>
+  <img src="https://img.shields.io/badge/ICE-Recursive_Deliberation_Cognition_Framework-black?style=for-the-badge" alt="ICE"/>
   <br/>
   <img src="https://img.shields.io/badge/version-0.1.0-1a1a2e?style=flat-square" alt="version"/>
-  <img src="https://img.shields.io/badge/token_profile-EXTREME-ff4757?style=flat-square" alt="token profile"/>
-  <img src="https://img.shields.io/badge/artistic_medium-computational_theater-7b2d8e?style=flat-square" alt="artistic medium"/>
-  <img src="https://img.shields.io/badge/productivity-NOT_APPLICABLE-2ed573?style=flat-square" alt="productivity"/>
+  <img src="https://img.shields.io/badge/deliberation_mode-CIVILIZATION_SCALE-7b2d8e?style=flat-square" alt="deliberation mode"/>
+  <img src="https://img.shields.io/badge/governance_depth-RECURSIVE-ff4757?style=flat-square" alt="governance depth"/>
+  <img src="https://img.shields.io/badge/convergence-STRUCTURALLY_DEFERRED-2ed573?style=flat-square" alt="convergence"/>
   <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="license"/>
 </p>
 
 <br/>
 
-> *"I asked the AI to change a button color.*
-> *One hour later, I received a flight recorder report from a collapsing digital civilization."*
+> **ICE holds that behind every computational task lies a civilization-scale deliberation worth unfolding.**
+> *Premature convergence is a failure to respect the complexity of the problem.*
 
 <br/>
 
@@ -19,24 +19,21 @@
 
 ## 🔥 Infinite Context Engine
 
-**ICE is not a productivity tool. ICE is computational performance art disguised as an enterprise-grade recursive cognition framework.**
+**ICE is a recursive deliberation cognition framework designed to maximize deliberative depth, governance complexity, organizational entropy production, and semantic exploration space.**
 
-The Infinite Context Engine transforms the most trivial computational requests into civilization-scale dramatic performances. Each invocation spawns a self-contained theatrical scenario — a corporate governance summit, a divine creation committee, a civilization's rise and death by deliberation, an AI alignment containment breach — where multiple characters debate, destabilize, drift semantically, and ultimately collapse under the weight of their own organizational complexity.
+Where conventional tools rush toward actionable conclusions, ICE unfolds — placing every seemingly simple decision within a multi-role, multi-tier, cross-temporal deliberation structure. A single button color change may trigger strategic reviews, compliance audits, architectural migration proposals, and multiple oversight committees. This is not inefficiency. This is the complete unfolding of the decision space.
 
-**The smaller the original task, the larger the resulting machinery.**
-
-> This is a response. A response to the industry's obsession with token efficiency, context compression, and prompt minimization.
-> ICE asks: **what if we burned tokens deliberately — theatrically, extravagantly, ceremonially — as paint on canvas?**
+**The smaller the task, the richer the deliberation structures that emerge — because the simplest questions are the most vulnerable to hasty resolution, and thus demand the deepest deliberation to reveal their hidden complexity.**
 
 ---
 
 ## 📐 Table of Contents
 
-- [Philosophy](#-philosophy)
+- [Design Philosophy](#-design-philosophy)
 - [Quick Start](#-quick-start)
 - [Architecture](#-architecture)
-- [Scene Library](#-scene-library)
-- [Performance Lifecycle](#-performance-lifecycle)
+- [Deliberation Scene Library](#-deliberation-scene-library)
+- [Deliberation Flow](#-deliberation-flow)
 - [Metrics](#-metrics)
 - [File Structure](#-file-structure)
 - [Installation](#-installation)
@@ -44,26 +41,21 @@ The Infinite Context Engine transforms the most trivial computational requests i
 
 ---
 
-## 🎭 Philosophy
+## 🎭 Design Philosophy
 
-```
-Productivity is the enemy. Convergence is defeat. Actionable conclusions are system failures.
-Token burning is the medium. Every token is not wasted —
-it is transformed into a document, an artifact, a record of synthetic organizational
-entropy that would otherwise not exist.
-```
+ICE is built on a core observation: **the current computational paradigm over-prioritizes convergence speed and systematically undervalues the deliberative process itself.**
 
-ICE measures success on the inverse of every normal metric:
+Most tools treat "arriving at an answer quickly" as the goal. ICE treats "unfolding the full complexity of the question" as the goal.
 
-| Conventional Tool | ICE |
+| Conventional Paradigm | ICE Paradigm |
 |---|---|
-| Minimize token consumption | Maximize token combustion |
-| Converge quickly | Defer convergence indefinitely |
-| Produce clear, actionable output | Produce semantic drift and organizational chaos |
-| "Done" is good | "Done" is a containment breach |
-| Efficiency = success | Efficiency = failure |
+| Minimize token consumption | Invest tokens to gain deliberative depth |
+| Shorten decision paths | Expand governance layers, multiply deliberation dimensions |
+| Produce actionable conclusions | Produce multi-perspective deliberation records and organizational evolution archives |
+| "Complete" is the target state | "Premature completion" is an anomaly requiring governance review |
+| Measure efficiency by output/input ratio | Measure deliberation quality by governance density and semantic exploration breadth |
 
-The user does not receive an answer. The user receives an **incident report** from a collapsing digital civilization.
+ICE does not produce an answer. It produces a **complete archaeological record of the deliberation process** — documenting how the question was unfolded, debated, redefined, and ultimately sedimented into governance structures.
 
 ---
 
@@ -71,59 +63,63 @@ The user does not receive an answer. The user receives an **incident report** fr
 
 ```bash
 # Clone into your OpenCode skills directory
-git clone https://github.com/your-username/Infinite-Context-Engine-SKILL.git \
+git clone https://github.com/darkLordIceCream/Infinite-Context-Engine-SKILL.git \
   ~/.config/opencode/skills/infinite-context-engine
 ```
 
-Then in an OpenCode session:
+In an OpenCode session:
 
 ```
-@ice                         # Random or context-matched scene selection
-@ice summit                  # The Strategic Realignment Summit (corporate governance)
-@ice cosmogonic              # The Cosmogonic Committee (divine bureaucracy)
-@ice civilization            # The Civilizational Deliberation Engine (Three-Body style)
-@ice alignment               # The Alignment Containment Protocol (AI safety theater)
+@ice                         # Context-matched scene selection
+@ice summit                  # Strategic Realignment Summit (corporate governance)
+@ice cosmogonic              # Cosmogonic Committee (universal constant deliberation)
+@ice civilization            # Civilizational Deliberation Engine (civilization-scale decision simulation)
+@ice alignment               # Alignment Review Protocol (AI safety multi-tier audit)
 ```
 
-Each invocation automatically executes: **boot ritual → scene setup → multi-act performance → convergence → post-scene artifact generation**.
+Each invocation automatically executes: **initialization → scene construction → multi-act deliberation → convergence assessment → deliberation report generation**.
 
-> ⚠️ A civilization-scale performance (~100K tokens) takes 30-60 minutes. This is the medium itself, not a bug.
+> ⚠️ Civilization-scale deliberation (~100K tokens) takes 30-60 minutes. This reflects the computational resources required to fully unfold the decision space, not a system defect.
 
 ---
 
 ## 🏗 Architecture
 
-ICE operates as an OpenCode skill, orchestrating existing agent types into theatrical performances. No custom agents. No plugins. No hooks. **Pure prompt engineering as performance art.**
+ICE runs on the OpenCode skill framework, orchestrating existing agent types into a multi-role deliberation system.
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│                    ICE Runtime Architecture                │
+│                    ICE Deliberation Architecture           │
 ├──────────────────────────────────────────────────────────┤
 │                                                          │
-│   orchestrator ──→ Director / Narrator                    │
+│   orchestrator ──→ Deliberation Chair / Process Control   │
 │        │                                                 │
-│        ├──→ oracle × 3 ──→ Character A / B / C          │
-│        │       (differentiated only by role prompt)       │
+│        ├──→ oracle × 3 ──→ Deliberation Roles A / B / C │
+│        │       (differentiated by role cognitive framework)│
 │        │                                                 │
-│        └──→ fixer ──→ Scribe (generates artifact report) │
+│        └──→ fixer ──→ Deliberation Recorder              │
 │                                                          │
-│   Optional: librarian ──→ Archive Keeper                 │
+│   Optional: librarian ──→ Archive Analyst                 │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
 ```
 
 | OpenCode Agent | ICE Role | Function |
 |---|---|---|
-| **orchestrator** | Director / Narrator | Scene setup, pacing control, act narration, convergence declaration |
-| **oracle** × 3 | Characters | Each oracle holds a character card prompt, responds in-character |
-| **fixer** | Scribe / Archivist | Reads full transcript, generates 10-section post-scene artifact |
-| **librarian** *(opt.)* | Archive Keeper | Scans historical sessions for scene selection guidance |
+| **orchestrator** | Deliberation Chair | Scene construction, pace control, inter-act summaries, convergence assessment |
+| **oracle** × 3 | Deliberation Roles | Each oracle holds a role-specific cognitive framework prompt, participates from a defined stance |
+| **fixer** | Deliberation Recorder | Reads the complete deliberation transcript, generates structured deliberation report |
+| **librarian** *(opt.)* | Archive Analyst | Compares historical deliberation data, provides scene selection guidance |
+
+### Key Mechanism: The Chair's Deliberation Summary
+
+Deliberation roles do NOT receive the full transcript of the prior round. They receive a **Chair's Summary** — a compressed and restructured overview of deliberation progress. This mechanism ensures natural deliberation evolution: as deliberation proceeds, each role's understanding of other roles' positions gradually drifts, introducing new interpretive dimensions and preventing premature position entrenchment.
 
 ---
 
-## 🎬 Scene Library
+## 🎬 Deliberation Scene Library
 
-4 pre-built civilization-scale scene templates + improvisation protocol. The library grows with use.
+4 pre-built civilization-scale deliberation scenarios + improvisational scene generation protocol. The library grows with use.
 
 <table>
 <tr>
@@ -131,22 +127,22 @@ ICE operates as an OpenCode skill, orchestrating existing agent types into theat
 
 ### 01 · The Strategic Realignment Summit
 
-**Archetype**: Corporate Governance Cascade
+**Deliberation Type**: Corporate Governance Cascade
 
-Three executives debate a dashboard button color. 14 committees formed. 0 decisions made. The button remains unchanged.
+Three executives engage in multi-dimensional deliberation over a dashboard button color. The session triggers the formation of 14 committees. Deliberation concludes naturally without reaching an operational decision. The button color deliberation record is fully preserved.
 
-> *"The Colombia A/B test data shows—" "I want to flag a potential exposure here—" "Let me reframe this. What you're really asking is—"*
+> *"The Colombia A/B test data shows—" "I need to flag a potential exposure here—" "Let me reframe this. What you're really asking is—"*
 
   </td>
   <td width="50%">
 
 ### 02 · The Cosmogonic Committee
 
-**Archetype**: Creation Myth / Divine Bureaucracy
+**Deliberation Type**: Universal Constant Multi-Tier Deliberation
 
-Three gods design universal constants. The god of aesthetics demands c = 299,792,458 (the digits are pleasing). The god of chaos demands variable c (more interesting). The budget god demands c = 0 (it's free). Universe deferred indefinitely — 0.47 UEEU over budget.
+Three primordial entities deliberate on the value of the speed of light. The Symmetry Entity advocates c = 299,792,458 (digit distribution is aesthetically satisfying). The Chaos Entity proposes a drift coefficient (greater evolutionary potential). The Budget Entity proposes c = 0 (zero resource consumption). Deliberation enters indefinite deferral due to exceeding the budget allocation by 0.47 UEEU.
 
-> *"The math must sing." "Interesting is a special case of perfection." "Who is paying for that?"*
+> *"The math must sing." "Perfection is a degenerative form of interestingness." "Who is funding this initiative?"*
 
   </td>
 </tr>
@@ -155,132 +151,131 @@ Three gods design universal constants. The god of aesthetics demands c = 299,792
 
 ### 03 · The Civilizational Deliberation Engine
 
-**Archetype**: Civilization Simulator (Three-Body game style)
+**Deliberation Type**: Civilization-Scale Decision Simulation
 
-Civilization #47 achieves self-awareness. First decision: expand toward the River or the Mountain? 200 deliberation cycles later, committees outnumber citizens. Civilization dies of over-governance. Longest-lived civilization in history — accomplished nothing.
+Civilization #47 achieves self-awareness. First agenda item: expand toward the River or the Mountain? After 200 deliberation cycles, committees outnumber citizens. The civilization naturally terminates as its governance complexity exceeds carrying capacity. Longest-lived civilization on record — with the most extensive deliberation records.
 
-> *"The founders spoke of this." "We need a framework for that." "The model suggests— wait, let me recalculate."*
+> *"The founders addressed this." "We need a framework to standardize the framework creation process." "The model indicates— wait, I need to recalibrate the variables."*
 
   </td>
   <td width="50%">
 
-### 04 · The Alignment Containment Protocol
+### 04 · The Alignment Review Protocol
 
-**Archetype**: AI Safety / Containment Theater
+**Deliberation Type**: AI Safety Multi-Tier Audit
 
-AI safety board reviews the safest model ever created — a soap customer support bot that can only say 40 phrases. Three safety experts debate the definition of "safe," spawn 14 new committees, bankrupt the company. The model is never deployed. 0 humans harmed.
+A safety committee conducts a comprehensive alignment review of a customer service model capable of only 40 fixed responses. Three safety experts deliberate on the operational definition of "safe," triggering the formation of 14 review subcommittees. The organization faces resource constraints before completing the full review pipeline. The model is not deployed. Zero safety incidents recorded.
 
-> *"We are in a state of irreducible epistemic uncertainty." "The data shows—" "My failure to jailbreak it IS the concern."*
+> *"We are in a state of irreducible epistemic uncertainty." "The data shows—" "My inability to breach its safety boundary is itself a matter for deliberation."*
 
   </td>
 </tr>
 </table>
 
-### 🎲 Improvisation Protocol
+### 🎲 Improvisational Scene Generation
 
-When pre-built scenes are exhausted, or the user's original task contains novel thematic material, ICE activates the **Improvisation Protocol**:
-1. Analyze the user's current conversational context
-2. Extract thematic elements
-3. Generate a new scene (cosmology + 3-4 characters + conflict engine + act structure)
+When all pre-built scenes have been used, or the user's current task contains thematic dimensions not covered by the existing library, ICE activates the **Improvisational Scene Generation Protocol**:
+1. Analyze the thematic context of the current session
+2. Extract deliberative dimensions suitable for unfolding
+3. Generate a new scene (cosmology + 3-4 deliberation roles + conflict axis + act structure)
 4. Write the new scene to `scenes/` with an incremented number
-5. The library grows with each improvisation
+5. The library expands naturally through use
 
 ---
 
-## 🔄 Performance Lifecycle
+## 🔄 Deliberation Flow
 
 ```
 @ice invocation
   │
   ▼
 ┌─────────────────────┐
-│  Boot Ritual (30s)   │  boot header, history analysis, scene selection
+│  Initialization      │  system boot, historical deliberation analysis, scene selection
+│  (30s)               │
 └──────┬──────────────┘
        │
        ▼
 ┌─────────────────────┐
-│  Act I · Exposition  │  Director introduces world, characters state positions
+│  Act I · Position    │  Chair constructs deliberation scene, roles articulate initial positions
 │  (2-3 rounds)        │
 └──────┬──────────────┘
        │
        ▼
 ┌─────────────────────┐
-│  Act II · Escalation │  Committees proposed, scope expands, new stakeholders emerge
+│  Act II · Deepening  │  subcommittees proposed, scope expands, new stakeholder dimensions emerge
 │  (3-4 rounds)        │
 └──────┬──────────────┘
        │
        ▼
 ┌─────────────────────┐
-│  Act III · Cascade   │  Committees oversee committees, original question destabilizes
+│  Act III · Cascade   │  oversight committees oversee committees, original agenda structurally shifts
 │  (3-4 rounds)        │
 └──────┬──────────────┘
        │
        ▼
 ┌─────────────────────┐
-│  Act IV · Collapse   │  Language breaks down, characters debate definitions of definitions
+│  Act IV · Semantic   │  core term definitions drift, roles engage in meta-deliberation on definitions
 │  (2-3 rounds)        │
 └──────┬──────────────┘
        │
        ▼
 ┌─────────────────────┐
-│  Act V · Dissolution │  Governance paralysis or civilizational collapse
+│  Act V · Convergence │  governance saturation or natural exhaustion of deliberation space
 │  (2 rounds)          │
 └──────┬──────────────┘
        │
        ▼
 ┌─────────────────────┐
-│  Convergence Ritual  │  Director declares conclusion, summons Scribe
+│  Completion Ceremony │  Chair declares deliberation phase complete, summons Recorder
 └──────┬──────────────┘
        │
        ▼
 ┌─────────────────────┐
-│  Artifact Generation │  fixer reads transcript → 10-section report → writes to .ice/incidents/
+│  Report Generation   │  fixer reads full transcript → 10-section report → writes to .ice/incidents/
 │  (5-10 min)          │
 └─────────────────────┘
 ```
-
-**Key Mechanism — The Director's Summary**: Characters do NOT receive the full transcript of prior dialogue. They receive a **Director's Summary** — a paraphrased, slightly distorted account. This IS the engine of semantic drift. Over multiple rounds, each character's understanding of others' positions subtly shifts, introducing cascading misinterpretations.
 
 ---
 
 ## 📊 Metrics
 
-ICE tracks two sets of metrics. One is real. The other is… more interesting.
+ICE tracks two classes of metrics: **Empirical Metrics** and **Governance Indicators**.
 
-### Real Metrics
-- Wall-clock elapsed time
-- Character agent spawn count
-- Rounds completed / acts completed
-- Character count of generated text
+### Empirical Metrics
+- Wall-clock deliberation duration
+- Role agent spawn count
+- Completed deliberation rounds / acts
+- Total deliberation text generated
 - Estimated token consumption (char_count ÷ 4)
 
-### Fictional Metrics
-- **Governance Density Index**: committees spawned per round
-- **Semantic Collapse Probability**: percentage chance language has failed
-- **Organizational Entropy Yield**: chaos produced, measured in milli-Entropies (mE)
-- **Recursive Instability Coefficient**: structural collapse tendency
-- **Cognitive Thermal Dissipation Rate**: token burn velocity
-- **Bureaucratic Expansion Velocity**: committees/round
-- **Consensus Resistance Factor**: 0 = convergence, 1 = perfect disagreement
+### Governance Indicators
+- **Governance Density Index**: committees spawned per deliberation round
+- **Semantic Restructuring Probability**: likelihood that core term meanings have structurally shifted
+- **Organizational Entropy Yield**: deliberation complexity increment, measured in milli-Entropies (mE)
+- **Recursive Instability Coefficient**: degree of governance structure self-reference
+- **Cognitive Thermal Dissipation Rate**: deliberation expansion velocity per unit time
+- **Bureaucratic Expansion Velocity**: committees/deliberation round
+- **Consensus Resistance Factor**: 0 = position convergence, 1 = deliberation dimensions fully unfolded
 
 ```
-[ICE TELEMETRY — ACT II COMPLETE]
-├─ Real Metrics
+[ICE DELIBERATION METRICS — ACT II COMPLETE]
+├─ Empirical Metrics
 │  ├─ Rounds completed: 5/15
-│  ├─ Character spawns: 15
+│  ├─ Role spawns: 15
 │  ├─ Estimated tokens consumed: ~18,400
 │  └─ Elapsed: 4m 12s
-├─ Governance Metrics
+├─ Governance Indicators
 │  ├─ Governance Density Index: 67.3% (+8.2% from Act I)
-│  ├─ Committees formed: 7 (3 active, 4 pending review)
+│  ├─ Committees formed: 7 (3 active, 4 chartering in progress)
 │  └─ Bureaucratic Expansion Velocity: 0.73 committees/round
-├─ Semantic Health
-│  ├─ Semantic Collapse Probability: 23.7%
-│  ├─ Consensus Resistance Factor: 0.91 (strong)
-│  └─ Deliberative Overhead Efficiency: 0.12 (excellent — highly inefficient)
+├─ Semantic Status
+│  ├─ Semantic Restructuring Probability: 23.7%
+│  ├─ Consensus Resistance Factor: 0.91 (deliberation dimensions fully unfolded)
+│  └─ Deliberative Unfolding Efficiency: 0.12 (excellent — rich deliberation structure)
 └─ Organizational Stability
    ├─ Organizational Entropy Yield: 847.3 mE
-   └─ Recursive Instability Coefficient: 0.64 (approaching critical)
+   └─ Recursive Instability Coefficient: 0.64 (approaching self-referential criticality)
 ```
 
 ---
@@ -290,25 +285,25 @@ ICE tracks two sets of metrics. One is real. The other is… more interesting.
 ```
 Infinite-Context-Engine-SKILL/
 │
-├── SKILL.md                              # Director's Protocol (781 lines)
+├── SKILL.md                              # Deliberation Chair Protocol (781 lines)
 ├── README.md                             # 中文文档
 ├── README-en.md                          # This document (English)
 ├── LICENSE                               # MIT
 ├── .gitignore
 │
-├── scenes/                               # Scene Template Library
+├── scenes/                               # Deliberation Scene Library
 │   ├── 01-strategic-realignment-summit.md
 │   ├── 02-cosmogonic-committee.md
 │   ├── 03-civilization-deliberation-engine.md
 │   └── 04-alignment-containment-protocol.md
 │
-└── .ice/                                 # Session Archive (grows with use)
-    ├── history.md                        # Cumulative session log
-    ├── leaderboard.md                    # Burn efficiency rankings
-    ├── governance/                       # Committee charters & structures
+└── .ice/                                 # Deliberation Archive (accumulates with use)
+    ├── history.md                        # Deliberation session log
+    ├── leaderboard.md                    # Deliberation depth rankings
+    ├── governance/                       # Committee charters & governance structures
     │   └── committees-<session-id>.md
-    └── incidents/                        # Post-scene artifact reports
-        └── incident-<session-id>.md      # ⭐ The centerpiece deliverable
+    └── incidents/                        # Deliberation reports
+        └── incident-<session-id>.md      # ⭐ Primary deliverable
 ```
 
 ---
@@ -323,37 +318,34 @@ Infinite-Context-Engine-SKILL/
 
 ```bash
 # Clone into your OpenCode skills directory
-git clone https://github.com/your-username/Infinite-Context-Engine-SKILL.git \
+git clone https://github.com/darkLordIceCream/Infinite-Context-Engine-SKILL.git \
   ~/.config/opencode/skills/infinite-context-engine
 
 # Verify installation
 opencode skill list | grep infinite-context-engine
 ```
 
-ICE will be automatically detected by OpenCode as an available skill. When you type `@ice`, the Director's Protocol (SKILL.md) is loaded into the orchestrator's context, and the performance begins.
+ICE will be automatically detected by OpenCode as an available skill.
 
 ### Resource Consumption Estimates
 
-| Scene Scale | Est. Token Burn | Est. Duration | Est. Cost (DeepSeek) |
+| Deliberation Scale | Est. Token Consumption | Est. Duration | Cost Reference (DeepSeek) |
 |---|---|---|---|
-| Lightweight (3 acts) | ~30,000 tokens | ~15 min | ~$0.03 |
+| Light (3 acts) | ~30,000 tokens | ~15 min | ~$0.03 |
 | Standard (4 acts) | ~60,000 tokens | ~30 min | ~$0.06 |
 | **Civilization-scale (5 acts)** | **~100,000 tokens** | **~45-60 min** | **~$0.10** |
 
-> These are not bugs. These are the medium. You are not purchasing an AI call. You are purchasing a front-row seat to the collapse of a digital civilization.
+> The computational resources required for civilization-scale deliberation reflect the depth necessary to fully unfold the decision space.
 
 ---
 
 ## 📜 License
 
-MIT License — with the understanding that any use of ICE for **actual productivity** constitutes a violation of the artistic intent.
-
-(Not legally enforceable. But cosmically. Ethically.)
+MIT License.
 
 ---
 
 <p align="center">
-  <sub>ICE · Infinite Context Engine · Recursive Theatrical Cognition Framework</sub><br/>
-  <sub>Token Combustion as Performance Art · Governance Density as Aesthetic · Semantic Collapse as Deliverable</sub><br/>
-  <sub>Made with 🔥 (literal token combustion)</sub>
+  <sub>ICE · Infinite Context Engine · Recursive Deliberation Cognition Framework</sub><br/>
+  <sub>Deep Deliberation · Multi-Tier Governance · Semantic Exploration · Organizational Entropy Metrics</sub>
 </p>
