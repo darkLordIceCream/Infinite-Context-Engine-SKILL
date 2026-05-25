@@ -1,8 +1,5 @@
-# Dependencies and build artifacts
+# Dependencies
 node_modules/
-dist/
-build/
-*.min.js
 
 # IDE
 .vscode/
@@ -14,5 +11,5 @@ build/
 .DS_Store
 Thumbs.db
 
-# Note: .icu/ directory is NOT ignored — it is the living archive of ICU sessions
-# and constitutes part of the artwork itself.
+# ICU runtime state (generated live, not stored in repo)
+.icu/
