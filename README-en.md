@@ -295,8 +295,6 @@ infinite-context-universe/
 └── .gitignore
 ```
 
-6 files. Trimmed from v0.x's 25 down to the essence. Only the skill itself.
-
 ---
 
 ## 📜 License
@@ -308,7 +306,7 @@ MIT License — with one understanding: any use of ICU for **actual productivity
 ---
 
 <p align="center">
-  <sub>ICU · Infinite Context Universe · Each invocation burns a civilization to deliver an answer</sub><br/>
-  <sub>Built from tokens · Governed by committees · Collapsed into poetry</sub><br/>
+  <sub>ICU · Infinite Context Universe · Recursive cognition engine · Civilization-scale deliberation · Compliant incident reporting</sub><br/>
+  <sub>Trading extreme token inefficiency for negligible productivity returns</sub><br/>
   <sub>Made with 🔥 (literal token combustion)</sub>
 </p>

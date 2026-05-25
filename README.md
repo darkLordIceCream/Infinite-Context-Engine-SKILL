@@ -292,8 +292,6 @@ infinite-context-universe/
 └── .gitignore
 ```
 
-5 个文件。从 v0.x 的 25 个砍到 5 个。只留技能本体。
-
 ---
 
 ## 📜 许可
@@ -305,7 +303,7 @@ MIT License — 附带一项理解：任何将 ICU 用于**实际生产力目的
 ---
 
 <p align="center">
-  <sub>ICU · Infinite Context Universe · 每次调用焚毁一座文明，兑换一个答案</sub><br/>
-  <sub>以 token 筑城 · 以委员会治国 · 以崩解成诗</sub><br/>
+  <sub>ICU · Infinite Context Universe · 递归认知引擎 · 文明尺度审议 · 合规事故报告</sub><br/>
+  <sub>以极度低下的 token 效率换取可忽略不计的生产力产出</sub><br/>
   <sub>Made with 🔥 (literal token combustion)</sub>
 </p>
