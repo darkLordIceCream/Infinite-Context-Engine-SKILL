@@ -15,7 +15,7 @@
 <br/>
 
 > *"I asked an AI to change a button color.*
-> *An hour later, I received a flight recorder report of a dying civilization."*
+> *Five minutes later, I received a flight recorder report of a dying civilization."*
 
 <br/>
 
@@ -23,7 +23,7 @@
 
 ## 🔥 Infinite Context Universe
 
-**ICU is not a productivity tool. ICU is an enterprise-grade recursive cognition framework.**
+**ICU is not a productivity tool. ICU is a civilization-scale recursive theater engine — fueled by tokens, staged across worlds.**
 
 Infinite Context Universe transforms the most trivial computational request into a civilization-scale dramatic performance. Every invocation hatches a self-contained theatrical scenario — a corporate strategy summit, a divine creation committee, a civilization born and dead of excessive deliberation, an AI alignment containment breach — where multiple characters debate, sabotage each other, drift semantically, and ultimately collapse under the weight of their own organizational complexity.
 
