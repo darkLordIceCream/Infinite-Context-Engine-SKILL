@@ -101,7 +101,7 @@ Once installed, invoke in an OpenCode session:
 @icu alignment               # Alignment Containment Protocol (AI safety theater)
 ```
 
-Each invocation automatically runs: **5-act performance → Incident Report (§1-§9) → Post-Civilizational Address (§10)**.
+Each invocation automatically runs: **elastic arc (escalation → drift → collapse) → Incident Report (§1-§8) → Post-Civilizational Address (§9)**.
 
 > ⚠️ A single invocation consumes ~30,000–100,000 tokens over 15–60 minutes. This is a feature, not a bug.
 
@@ -147,8 +147,8 @@ All modes produce the same incident report format. The audience cannot tell the 
 
 Each performance produces two outputs:
 
-1. **Incident Report §1-§9** — a complete civilization collapse archive: executive summary, committee catalog, semantic health analysis, organizational entropy audit
-2. **§10 Post-Civilizational Address** — the Director steps forward from the ruins to answer your question with the gravity of someone who burned an entire civilization to reach it
+1. **Incident Report §1-§8** — a complete civilization collapse archive: executive summary, committee catalog, semantic health analysis, organizational entropy audit
+2. **§9 Post-Civilizational Address** — the Director steps forward from the ruins to answer your question with the gravity of someone who burned an entire civilization to reach it
 
 **Output goes directly into the conversation. No disk writes. No directories.**
 
@@ -156,7 +156,7 @@ Each performance produces two outputs:
 
 ## 🎬 Scene Library
 
-4 pre-built civilization-scale scene skeletons + improvisation protocol. The library grows with use.
+4 tonal seeds + generative engine: each invocation builds a unique civilization. The more you call, the more worlds exist.
 
 <table>
 <tr>
@@ -211,7 +211,7 @@ An AI safety board reviews the safest model ever created — a soap customer sup
 
 ### 🎲 Improvisation Mode
 
-Skeletons exhausted? User's request contains novel thematic material? ICU activates the §6 Improvisation Protocol: auto-generates a new skeleton (world + 3 characters + conflict engine + collapse mode). The library grows with each invocation.
+ICU follows §1 scene generation rules: builds a new civilization from scratch for every invocation, archives the result as a tonal seed. The library grows with each call.
 
 ---
 
@@ -221,55 +221,21 @@ Skeletons exhausted? User's request contains novel thematic material? ICU activa
 @icu invocation
   │
   ▼
-┌─────────────────────┐
-│  Bootstrap (30s)    │  Session ID, scene selection, original task captured
-└──────┬──────────────┘
-       │
-       ▼
-┌─────────────────────┐
-│  Act I · Foundation │  Director introduces world, characters state positions
-│  (2-3 rounds)       │
-└──────┬──────────────┘
-       │
-       ▼
-┌─────────────────────┐
-│  Act II · Escalation│  Committees proposed, scope expands, stakeholders emerge
-│  (3-4 rounds)       │
-└──────┬──────────────┘
-       │
-       ▼
-┌─────────────────────┐
-│  Act III · Cascade  │  Committees oversee committees, original question destabilizes
-│  (3-4 rounds)       │
-└──────┬──────────────┘
-       │
-       ▼
-┌─────────────────────┐
-│  Act IV · Collapse  │  Language fails, characters debate definitions of definitions
-│  (2-3 rounds)       │
-└──────┬──────────────┘
-       │
-       ▼
-┌─────────────────────┐
-│  Act V · Dissolution│  Governance paralysis or civilizational death
-│  (1-2 rounds)       │
-└──────┬──────────────┘
-       │
-       ▼
-┌─────────────────────┐
-│  Convergence Ritual │  Director declares conclusion, summons Scribe
-└──────┬──────────────┘
-       │
-       ▼
-┌─────────────────────┐
-│  Incident Report    │  §1-§9 report → §10 Post-Civilizational Address
-│  (in conversation)  │
-└─────────────────────┘
+Mode detection · Language detection · World generation
+  │
+  ▼
+Escalation ——————→ Drift ——————→ Collapse
+  │                   │              │
+  ▼                   ▼              ▼
+ Telemetry          Telemetry       Telemetry
+  │
+  ▼
+Incident Report §1-§8 ————→ §9 Post-Civilizational Address
 ```
 
 **Key Mechanism — The Director's Summary as Semantic Drift**: Characters do not receive the full transcript of previous rounds. They receive a **Director's Summary** — a paraphrased, slightly distorted version. This IS the engine of semantic drift. Over multiple rounds, each character's understanding of others' positions gradually diverges from reality, triggering cascading misunderstandings.
 
-**Key Mechanism — The Return Protocol §10**: Every performance MUST conclude with §10. Contents: ① a direct answer to the user's original question ② an absurdly academic explanation of how the answer was derived ③ a transparent accounting of tokens burned, committees destroyed, civilizations lost, and dollar cost ④ a closing sentence. **The answer must be correct.** Not sarcasm. Not evasion. The answer might be "2+2=4" — the comedy lies in the contrast between that simple truth and the civilization that was burned to reach it.
+**Key Mechanism — The Return Protocol §9**: Every performance MUST conclude with §9. Contents: ① a direct answer to the user's original question ② an absurdly academic explanation of how the answer was derived ③ a transparent accounting of tokens burned, committees destroyed, civilizations lost, and dollar cost ④ a closing sentence. **The answer must be correct.** Not sarcasm. Not evasion. The answer might be "2+2=4" — the comedy lies in the contrast between that simple truth and the civilization that was burned to reach it.
 
 ---
 
@@ -301,7 +267,7 @@ ICU tracks two sets of metrics. One set is real. The other is... more interestin
 │  ├─ Est. token burn: ~18,400
 │  └─ Wall time: 4m 12s
 ├─ Governance Metrics
-│  ├─ Governance Density: 67.3% (+8.2% from Act I)
+│  ├─ Governance Density: 67.3% (+8.2% from previous phase)
 │  ├─ Committees formed: 7 (3 active, 4 awaiting approval)
 │  └─ Bureaucratic Expansion: 0.73 committees/round
 ├─ Semantic Health
@@ -320,7 +286,7 @@ ICU tracks two sets of metrics. One set is real. The other is... more interestin
 ```
 infinite-context-universe/
 │
-├── SKILL.md                    # The one core file — Director Protocol + 4 skeletons + Report Template
+├── SKILL.md                    # The one core file — Director Protocol + Report Template
 ├── cli.js                      # npx installer (12 lines, file copy, zero git ops)
 ├── package.json                # npm configuration
 ├── README.md                   # This document (Chinese)
