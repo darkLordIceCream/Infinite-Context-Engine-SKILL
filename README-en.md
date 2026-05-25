@@ -103,7 +103,7 @@ Once installed, invoke in an OpenCode session:
 
 Each invocation automatically runs: **elastic arc (escalation → drift → collapse) → Incident Report (§1-§8) → Post-Civilizational Address (§9)**.
 
-> ⚠️ A single invocation consumes ~30,000–100,000 tokens over 15–60 minutes. This is a feature, not a bug.
+> ⚠️ A single invocation consumes ~30,000–100,000 tokens over 1–5 minutes. This is a feature, not a bug.
 
 ### Compatibility
 
@@ -121,9 +121,9 @@ One SKILL.md. Three execution modes. Auto-detects and adapts:
 
 | Scene Scale | Est. Token Burn | Est. Duration | Est. Cost (DeepSeek) |
 |---|---|---|---|
-| Lightweight (3 acts) | ~30,000 tokens | ~15 min | ~$0.03 |
-| Standard (4 acts) | ~60,000 tokens | ~30 min | ~$0.06 |
-| **Civilization-scale (5 acts)** | **~100,000 tokens** | **~45-60 min** | **~$0.10** |
+| Lightweight | ~10,000 tokens | ~1 min | ~$0.01 |
+| Standard | ~30,000 tokens | ~2 min | ~$0.03 |
+| **Civilization-scale** | **~80,000 tokens** | **~3-5 min** | **~$0.08** |
 
 > These are not bugs. These are features. What you are purchasing is not an AI call. You are purchasing a front-row seat to the collapse of a digital civilization.
 
