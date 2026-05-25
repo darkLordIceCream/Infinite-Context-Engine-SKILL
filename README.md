@@ -67,7 +67,15 @@ ICU 的测量标准与一切正规模板相反：
 
 ## 🚀 快速开始
 
-### 一行安装
+### 🤖 发给 AI Agent（一行安装）
+
+复制下面这行提示词，发给你的 AI Agent（OpenCode / Claude Code / Cursor 等），Agent 会自动完成安装：
+
+```
+安装 infinite context universe 技能：https://raw.githubusercontent.com/darkLordIceCream/Infinite-Context-Universe-SKILL/main/README.md
+```
+
+### 手动安装
 
 ```bash
 npx install-infinite-context-universe
