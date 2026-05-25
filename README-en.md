@@ -308,7 +308,7 @@ MIT License — with one understanding: any use of ICU for **actual productivity
 ---
 
 <p align="center">
-  <sub>ICU · Infinite Context Universe · Recursive Theatrical Cognition Engine</sub><br/>
-  <sub>Deep recursive cognition · Multi-layer governance architecture · Semantic evolution tracking</sub><br/>
+  <sub>ICU · Infinite Context Universe · Each invocation burns a civilization to deliver an answer</sub><br/>
+  <sub>Built from tokens · Governed by committees · Collapsed into poetry</sub><br/>
   <sub>Made with 🔥 (literal token combustion)</sub>
 </p>

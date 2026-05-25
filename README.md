@@ -305,7 +305,7 @@ MIT License — 附带一项理解：任何将 ICU 用于**实际生产力目的
 ---
 
 <p align="center">
-  <sub>ICU · Infinite Context Universe · 递归戏剧认知框架</sub><br/>
-  <sub>深度递归认知 · 多层治理架构 · 语义演化追踪</sub><br/>
+  <sub>ICU · Infinite Context Universe · 每次调用焚毁一座文明，兑换一个答案</sub><br/>
+  <sub>以 token 筑城 · 以委员会治国 · 以崩解成诗</sub><br/>
   <sub>Made with 🔥 (literal token combustion)</sub>
 </p>
