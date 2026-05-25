@@ -55,7 +55,7 @@ Token burning is the end in itself. No token is wasted —
 it is transmuted into a document, an artifact, a record of synthetic organizational entropy that would not otherwise exist.
 ```
 
-ICU is measured opposite to every normal template:
+Every skill measures itself by how fast it converges. ICU measures them by how badly they missed the point:
 
 | Traditional Tool | ICU |
 |---|---|
@@ -65,7 +65,7 @@ ICU is measured opposite to every normal template:
 | "Finished" is good | "Finished" is an incident event |
 | Efficiency = Success | Efficiency = Failure |
 
-The user does not receive an answer. The user receives an **incident report** from a collapsing digital civilization.
+The user receives an answer — delivered alongside the civilization that burned to find it. Accompanied by an **incident report** from a collapsing digital civilization.
 
 ---
 
@@ -91,7 +91,7 @@ npx install-infinite-context-universe
 
 ### Usage
 
-Once installed, invoke in an OpenCode session:
+Once installed, invoke in any skill-capable AI session (OpenCode / Claude Code / Codex, etc.):
 
 ```
 @icu                         # Auto-match a scene, performance begins
