@@ -6,6 +6,10 @@
   <img src="https://img.shields.io/badge/cognitive_architecture-recursive_deliberation-7b2d8e?style=flat-square" alt="cognitive architecture"/>
   <img src="https://img.shields.io/badge/productivity-NOT_APPLICABLE-2ed573?style=flat-square" alt="productivity"/>
   <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="license"/>
+
+  <br/>
+  <br/>
+  <a href="README-en.md">English</a> | <b>中文</b>
 </p>
 
 <br/>
