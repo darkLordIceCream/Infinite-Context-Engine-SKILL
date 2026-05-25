@@ -303,7 +303,7 @@ infinite-context-universe/
 
 MIT License — with one understanding: any use of ICU for **actual productivity purposes** constitutes a violation of the design intent of this framework.
 
-(Legally unenforceable. But cosmically. Morally.)
+(This clause is not legally binding — but cosmically, morally, it holds.)
 
 ---
 
