@@ -1,6 +1,6 @@
 {
   "name": "infinite-context-universe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ICU — Recursive Theatrical Cognition Engine. One npx command to install. @icu to invoke.",
   "bin": {
     "install-infinite-context-universe": "./cli.js"
